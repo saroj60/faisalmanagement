@@ -2,6 +2,8 @@ import React from 'react';
 import Section from '../components/ui/Section';
 import { Target, Eye, Heart } from 'lucide-react';
 import Card from '../components/ui/Card';
+import headerBg from '../assets/about-header.png';
+import mdPhoto from '../assets/jaynath-shah.png';
 
 const values = [
     { title: 'Mission', icon: Target, desc: 'To provide world-class manpower solutions that drive business growth and individual success.', color: 'bg-blue-100 text-blue-600' },
@@ -15,7 +17,7 @@ const About = () => {
             <div className="relative bg-gray-50 py-24 overflow-hidden">
                 <div className="absolute inset-0 z-0">
                     <img
-                        src="/src/assets/about-header.png"
+                        src={headerBg}
                         alt="Office Background"
                         className="w-full h-full object-cover opacity-10"
                     />
@@ -51,7 +53,7 @@ const About = () => {
                             <div className="relative mx-auto w-64 h-64 md:w-full md:h-auto md:aspect-[3/4] rounded-xl overflow-hidden shadow-lg">
                                 {/* Using the imported image would be better, but for now assuming direct path or import */}
                                 <img
-                                    src="/src/assets/jaynath-shah.png"
+                                    src={mdPhoto}
                                     alt="Managing Director"
                                     className="w-full h-full object-cover"
                                 />

@@ -5,6 +5,8 @@ import { motion, AnimatePresence } from 'framer-motion';
 import { NAV_LINKS, COMPANY_INFO } from '../../utils/constants';
 import Button from '../ui/Button';
 
+import logo from '../../assets/logo.png';
+
 const Navbar = () => {
     const [isOpen, setIsOpen] = useState(false);
     const location = useLocation();
@@ -18,7 +20,7 @@ const Navbar = () => {
                     {/* Logo */}
                     <div className="flex-shrink-0 flex items-center">
                         <Link to="/">
-                            <img src="/src/assets/logo.png" alt={COMPANY_INFO.name} className="h-12 w-auto" />
+                            <img src={logo} alt={COMPANY_INFO.name} className="h-12 w-auto" />
                         </Link>
                     </div>
 
