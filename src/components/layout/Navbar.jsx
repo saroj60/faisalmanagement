@@ -30,7 +30,10 @@ const Navbar = () => {
                             <Link
                                 key={link.name}
                                 to={link.path}
-                                className={`text-sm font-medium transition-colors hover:text-accent ${location.pathname === link.path ? 'text-primary font-bold' : 'text-black'
+                                className={`text-sm font-medium transition-colors hover:text-accent ${(link.path === '/' && location.pathname === '/') ||
+                                        (link.path !== '/' && location.pathname.startsWith(link.path))
+                                        ? 'text-primary font-bold'
+                                        : 'text-black'
                                     }`}
                             >
                                 {link.name}
