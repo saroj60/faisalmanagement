@@ -14,6 +14,8 @@ import ProtectedRoute from './components/layout/ProtectedRoute';
 import { AuthProvider } from './context/AuthContext';
 import { COMPANY_INFO } from './utils/constants';
 
+import ScrollToTop from './components/utils/ScrollToTop';
+
 function App() {
   return (
     <HelmetProvider>
@@ -23,6 +25,7 @@ function App() {
       </Helmet>
       <AuthProvider>
         <Router>
+          <ScrollToTop />
           <Layout>
             <Routes>
               <Route path="/" element={<Home />} />

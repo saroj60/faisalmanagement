@@ -3,7 +3,7 @@ import Section from '../components/ui/Section';
 import { Target, Eye, Heart } from 'lucide-react';
 import Card from '../components/ui/Card';
 import headerBg from '../assets/about-header.png';
-import mdPhoto from '../assets/jaynath-shah.png';
+import mdPhoto from '../assets/chairman.jpg';
 
 const values = [
     { title: 'Mission', icon: Target, desc: 'To provide world-class manpower solutions that drive business growth and individual success.', color: 'bg-blue-100 text-blue-600' },
@@ -60,8 +60,8 @@ const About = () => {
                             </div>
                         </div>
                         <div className="md:w-2/3 text-center md:text-left">
-                            <h2 className="text-3xl font-bold text-primary mb-2">Message from the Managing Director</h2>
-                            <h3 className="text-xl font-semibold text-gray-700 mb-6">Jaynath Shah</h3>
+                            <h2 className="text-3xl font-bold text-primary mb-2">Message from the Chairman</h2>
+                            <h3 className="text-xl font-semibold text-gray-700 mb-6">Prem Chhetri</h3>
 
                             <div className="space-y-4 text-gray-600 mb-6 text-lg leading-relaxed">
                                 <p>First of all, we would like to extend our warm and heartfelt greetings to all members of the business community, both abroad and in Nepal.</p>
