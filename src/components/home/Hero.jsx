@@ -30,8 +30,8 @@ const Hero = () => {
                             Secure your future with trusted jobs in the Gulf, Malaysia, Europe, and beyond. We connect skilled and unskilled workers with top international employers.
                         </p>
                         <div className="flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-4">
-                            <Link to="/jobs">
-                                <Button size="lg" className="w-full sm:w-auto">Find Jobs</Button>
+                            <Link to="/demands">
+                                <Button size="lg" className="w-full sm:w-auto">View Demand</Button>
                             </Link>
                             <Link to="/contact">
                                 <Button size="lg" variant="outline" className="w-full sm:w-auto text-primary border-primary hover:bg-primary hover:text-white">
