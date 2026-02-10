@@ -48,18 +48,18 @@ const About = () => {
 
                 {/* Message from MD Section */}
                 <div className="bg-gray-50 rounded-2xl p-8 md:p-12 mb-16 shadow-sm border border-gray-100">
-                    <div className="flex flex-col md:flex-row gap-10 items-center">
-                        <div className="md:w-1/3">
-                            <div className="relative mx-auto w-64 h-64 md:w-full md:h-auto md:aspect-[3/4] rounded-xl overflow-hidden shadow-lg">
+                    <div className="flex flex-col md:flex-row gap-10 items-start">
+                        <div className="md:w-2/5">
+                            <div className="relative mx-auto w-full h-auto rounded-xl overflow-hidden shadow-lg">
                                 {/* Using the imported image would be better, but for now assuming direct path or import */}
                                 <img
                                     src={mdPhoto}
                                     alt="Managing Director"
-                                    className="w-full h-full object-cover"
+                                    className="w-full h-auto"
                                 />
                             </div>
                         </div>
-                        <div className="md:w-2/3 text-center md:text-left">
+                        <div className="md:w-3/5 text-center md:text-left">
                             <h2 className="text-3xl font-bold text-primary mb-2">Message from the Chairman</h2>
                             <h3 className="text-xl font-semibold text-gray-700 mb-6">Prem Chhetri</h3>
 
