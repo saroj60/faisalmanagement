@@ -70,13 +70,7 @@ const About = () => {
                                 <p>We hereby assure you of our quality services and look forward to better cooperation in the future.</p>
                             </div>
 
-                            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mt-8 border-t border-gray-200 pt-6">
-                                <div>
-                                    <p className="text-sm text-gray-500 uppercase tracking-wide font-semibold">Contact</p>
-                                    <p className="text-gray-800 font-medium mt-1">9851026983, 9801026983</p>
-                                </div>
 
-                            </div>
                         </div>
                     </div>
                 </div>
