@@ -11,7 +11,7 @@ const __dirname = path.dirname(__filename);
 
 const app = express();
 const PORT = process.env.PORT || 5000;
-const SECRET_KEY = 'your-secret-key-should-be-in-env';
+const SECRET_KEY = process.env.SECRET_KEY || 'your-secret-key-should-be-in-env';
 
 app.use(cors());
 app.use(bodyParser.json());
