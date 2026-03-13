@@ -5,6 +5,7 @@ import Section from '../components/ui/Section';
 import Card from '../components/ui/Card';
 import Button from '../components/ui/Button';
 import { MapPin, DollarSign, Users, Calendar, ArrowRight, Trash2 } from 'lucide-react';
+import API_BASE_URL from '../config/api';
 
 const Demands = () => {
     const [demands, setDemands] = useState([]);
@@ -13,7 +14,7 @@ const Demands = () => {
     const isAdmin = user?.role === 'admin';
 
     const fetchDemands = () => {
-        fetch('/api/demands')
+        fetch(`${API_BASE_URL}/api/demands`)
             .then(res => res.json())
             .then(data => {
                 setDemands(data);
@@ -33,7 +34,7 @@ const Demands = () => {
         if (!window.confirm("Are you sure you want to delete this demand?")) return;
 
         try {
-            const response = await fetch(`/api/demands/${id}`, {
+            const response = await fetch(`${API_BASE_URL}/api/demands/${id}`, {
                 method: 'DELETE',
                 headers: {
                     'Authorization': `Bearer ${user.token}`

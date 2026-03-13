@@ -4,6 +4,7 @@ import Input from '../../components/ui/Input';
 import Button from '../../components/ui/Button';
 import Card from '../../components/ui/Card';
 import Section from '../../components/ui/Section';
+import API_BASE_URL from '../../config/api';
 
 const CreateDemand = () => {
     const navigate = useNavigate();
@@ -36,7 +37,7 @@ const CreateDemand = () => {
         }
 
         try {
-            const response = await fetch('/api/demands', {
+            const response = await fetch(`${API_BASE_URL}/api/demands`, {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',

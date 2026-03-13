@@ -4,6 +4,7 @@ import { MapPin, DollarSign, Users, Calendar, ChevronLeft, ArrowRight } from 'lu
 import Section from '../components/ui/Section';
 import Card from '../components/ui/Card';
 import Button from '../components/ui/Button';
+import API_BASE_URL from '../config/api';
 
 const DemandDetails = () => {
     const { id } = useParams();
@@ -11,7 +12,7 @@ const DemandDetails = () => {
     const [loading, setLoading] = useState(true);
 
     useEffect(() => {
-        fetch(`/api/demands/${id}`)
+        fetch(`${API_BASE_URL}/api/demands/${id}`)
             .then(res => res.json())
             .then(data => {
                 setDemand(data);
