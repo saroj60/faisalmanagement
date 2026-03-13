@@ -59,6 +59,21 @@ const Contact = () => {
                                 </div>
                             </div>
                         </Card>
+                        <Card className="p-6 transition-shadow duration-300 hover:shadow-md">
+                            <div className="flex items-start">
+                                <MapPin className="text-accent mr-4 flex-shrink-0 mt-1" />
+                                <div>
+                                    <h3 className="font-bold text-primary mb-2">Our Branches</h3>
+                                    <ul className="text-gray-600 text-sm space-y-1">
+                                        <li>India</li>
+                                        <li>Qatar</li>
+                                        <li>Dubai</li>
+                                        <li>Bangladesh</li>
+                                        <li>Saudi Arabia</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </Card>
 
                         {/* Google Maps Embed Placeholder - using gray div */}
                         <div className="bg-gray-200 h-64 rounded-lg overflow-hidden relative">

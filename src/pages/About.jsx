@@ -4,6 +4,8 @@ import { Target, Eye, Heart } from 'lucide-react';
 import Card from '../components/ui/Card';
 import headerBg from '../assets/about-header.png';
 import mdPhoto from '../assets/chairman.jpg';
+import jaySahPhoto from '../assets/MD.png';
+import partnerPhoto from '../assets/partner.jpg';
 
 const values = [
     { title: 'Mission', icon: Target, desc: 'To provide world-class manpower solutions that drive business growth and individual success.', color: 'bg-blue-100 text-blue-600' },
@@ -73,6 +75,59 @@ const About = () => {
 
                         </div>
                     </div>
+
+                    {/* Message from Managing Director */}
+                    <div className="flex flex-col md:flex-row gap-10 items-start mt-16 pb-8">
+                        <div className="md:w-2/5">
+                            <div className="relative mx-auto w-full h-auto rounded-xl overflow-hidden shadow-lg border border-gray-100">
+                                <img
+                                    src={jaySahPhoto}
+                                    alt="Managing Director"
+                                    className="w-full h-auto"
+                                    onError={(e) => {
+                                        e.target.src = 'https://images.unsplash.com/photo-1560250097-0b93528c311a?q=80&w=1974&auto=format&fit=crop';
+                                    }}
+                                />
+                            </div>
+                        </div>
+                        <div className="md:w-3/5 text-center md:text-left">
+                            <h2 className="text-3xl font-bold text-primary mb-2">Managing Director</h2>
+                            <h3 className="text-xl font-semibold text-gray-700 mb-6">Jay Sah</h3>
+
+                            <div className="space-y-4 text-gray-600 mb-6 text-lg leading-relaxed">
+                                <p>We are dedicated to providing ethical, transparent, and highly efficient recruitment services that benefit both employers and employees.</p>
+                                <p>Our team works tirelessly to match the right skills with the right opportunities, fostering mutually beneficial relationships across the globe.</p>
+                            </div>
+                        </div>
+                    </div>
+
+
+                {/* Message from Business Partner */}
+                <div className="bg-white rounded-2xl p-8 md:p-12 mb-16 shadow-sm border border-gray-100">
+                    <div className="flex flex-col md:flex-row-reverse gap-10 items-start">
+                        <div className="md:w-2/5">
+                            <div className="relative mx-auto w-full h-auto rounded-xl overflow-hidden shadow-lg">
+                                <img
+                                    src={partnerPhoto}
+                                    alt="Business Partner"
+                                    className="w-full h-auto"
+                                    onError={(e) => {
+                                        e.target.src = 'https://images.unsplash.com/photo-1560250097-0b93528c311a?q=80&w=1974&auto=format&fit=crop';
+                                    }}
+                                />
+                            </div>
+                        </div>
+                        <div className="md:w-3/5 text-center md:text-left">
+                            <h2 className="text-3xl font-bold text-primary mb-2">Business Partner</h2>
+                            <h3 className="text-xl font-semibold text-gray-700 mb-6">Krishna H Adhikari</h3>
+
+                            <div className="space-y-4 text-gray-600 mb-6 text-lg leading-relaxed">
+                                <p>Working together to bridge the gap between global opportunities and local talent, ensuring excellence in every placement.</p>
+                                <p>Our commitment remains focused on delivering quality manpower solutions that drive growth for both our clients and our candidates.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
                 </div>
 
                 {/* Vision Narrative */}
