@@ -48,41 +48,14 @@ const About = () => {
                     </div>
                 </div>
 
-                {/* Message from MD Section */}
+                {/* Message from Chairman - Jay Sah - TOP */}
                 <div className="bg-gray-50 rounded-2xl p-8 md:p-12 mb-16 shadow-sm border border-gray-100">
                     <div className="flex flex-col md:flex-row gap-10 items-start">
-                        <div className="md:w-2/5">
-                            <div className="relative mx-auto w-full h-auto rounded-xl overflow-hidden shadow-lg">
-                                {/* Using the imported image would be better, but for now assuming direct path or import */}
-                                <img
-                                    src={mdPhoto}
-                                    alt="Managing Director"
-                                    className="w-full h-auto"
-                                />
-                            </div>
-                        </div>
-                        <div className="md:w-3/5 text-center md:text-left">
-                            <h2 className="text-3xl font-bold text-primary mb-2">Message from the Chairman</h2>
-                            <h3 className="text-xl font-semibold text-gray-700 mb-6">Prem Chhetri</h3>
-
-                            <div className="space-y-4 text-gray-600 mb-6 text-lg leading-relaxed">
-                                <p>First of all, we would like to extend our warm and heartfelt greetings to all members of the business community, both abroad and in Nepal.</p>
-                                <p>Our business is driven by a service-oriented mission that creates employment opportunities and helps improve the economic conditions of underprivileged and backward communities in society.</p>
-                                <p>Faisal Management Services is a professional HR, recruitment, selection, outsourcing, and manpower sourcing company. We provide all categories of workers—professional, skilled, semi-skilled, and unskilled—from Nepal to various companies for their projects in the U.A.E., Qatar, Saudi Arabia, Oman, Kuwait, Bahrain, and Malaysia.</p>
-                                <p>We hereby assure you of our quality services and look forward to better cooperation in the future.</p>
-                            </div>
-
-
-                        </div>
-                    </div>
-
-                    {/* Message from Managing Director */}
-                    <div className="flex flex-col md:flex-row gap-10 items-start mt-16 pb-8">
                         <div className="md:w-2/5">
                             <div className="relative mx-auto w-full h-auto rounded-xl overflow-hidden shadow-lg border border-gray-100">
                                 <img
                                     src={jaySahPhoto}
-                                    alt="Managing Director"
+                                    alt="Chairman"
                                     className="w-full h-auto"
                                     onError={(e) => {
                                         e.target.src = 'https://images.unsplash.com/photo-1560250097-0b93528c311a?q=80&w=1974&auto=format&fit=crop';
@@ -91,8 +64,35 @@ const About = () => {
                             </div>
                         </div>
                         <div className="md:w-3/5 text-center md:text-left">
-                            <h2 className="text-3xl font-bold text-primary mb-2">Managing Director</h2>
+                            <h2 className="text-3xl font-bold text-primary mb-2">Message from the Chairman</h2>
                             <h3 className="text-xl font-semibold text-gray-700 mb-6">Jay Sah</h3>
+
+                            <div className="space-y-4 text-gray-600 mb-6 text-lg leading-relaxed">
+                                <p>First of all, we would like to extend our warm and heartfelt greetings to all members of the business community, both abroad and in Nepal.</p>
+                                <p>Our business is driven by a service-oriented mission that creates employment opportunities and helps improve the economic conditions of underprivileged and backward communities in society.</p>
+                                <p>Faisal Management Services is a professional HR, recruitment, selection, outsourcing, and manpower sourcing company. We provide all categories of workers—professional, skilled, semi-skilled, and unskilled—from Nepal to various companies for their projects in the U.A.E., Qatar, Saudi Arabia, Oman, Kuwait, Bahrain, and Malaysia.</p>
+                                <p>We hereby assure you of our quality services and look forward to better cooperation in the future.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    {/* Business Partner - Prem Chhetri - MIDDLE */}
+                    <div className="flex flex-col md:flex-row gap-10 items-start mt-16 pb-8">
+                        <div className="md:w-2/5">
+                            <div className="relative mx-auto w-full h-auto rounded-xl overflow-hidden shadow-lg">
+                                <img
+                                    src={mdPhoto}
+                                    alt="Business Partner"
+                                    className="w-full h-auto"
+                                    onError={(e) => {
+                                        e.target.src = 'https://images.unsplash.com/photo-1560250097-0b93528c311a?q=80&w=1974&auto=format&fit=crop';
+                                    }}
+                                />
+                            </div>
+                        </div>
+                        <div className="md:w-3/5 text-center md:text-left">
+                            <h2 className="text-3xl font-bold text-primary mb-2">Business Partner</h2>
+                            <h3 className="text-xl font-semibold text-gray-700 mb-6">Prem Chhetri</h3>
 
                             <div className="space-y-4 text-gray-600 mb-6 text-lg leading-relaxed">
                                 <p>We are dedicated to providing ethical, transparent, and highly efficient recruitment services that benefit both employers and employees.</p>
@@ -102,8 +102,8 @@ const About = () => {
                     </div>
 
 
-                {/* Message from Business Partner */}
-                <div className="bg-white rounded-2xl p-8 md:p-12 mb-16 shadow-sm border border-gray-100">
+                {/* Business Partner - Krishna H Adhikari - BOTTOM */}
+                <div className="bg-white rounded-2xl p-8 md:p-12 mb-16 shadow-sm border border-gray-100 mt-8">
                     <div className="flex flex-col md:flex-row-reverse gap-10 items-start">
                         <div className="md:w-2/5">
                             <div className="relative mx-auto w-full h-auto rounded-xl overflow-hidden shadow-lg">
@@ -129,6 +129,7 @@ const About = () => {
                     </div>
                 </div>
                 </div>
+
 
                 {/* Vision Narrative */}
                 <div className="mb-16 text-center max-w-4xl mx-auto">
