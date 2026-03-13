@@ -101,10 +101,10 @@ const Contact = () => {
                     <div className="lg:col-span-2">
                         <Card className="p-8">
                             <h2 className="text-2xl font-bold text-primary mb-6">Send us a Message</h2>
-                            <form className="space-y-6" action="https://formsubmit.co/faisalmanagementservicess@gmail.com" method="POST">
+                            <form className="space-y-6" action="https://formsubmit.co/info@faisalnepal.com" method="POST">
                                 <input type="hidden" name="_captcha" value="false" />
                                 <input type="hidden" name="_subject" value="New Contact Inquiry from Website" />
-                                <input type="hidden" name="_next" value="http://localhost:5173/contact" />
+                                <input type="hidden" name="_next" value="https://www.faisalnepal.com.np/contact" />
 
                                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                                     <Input label="Your Name" name="name" placeholder="Enter your name" required />

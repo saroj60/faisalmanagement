@@ -8,7 +8,7 @@ export const NAV_LINKS = [
 
 export const COMPANY_INFO = {
     name: 'Faisal Management',
-    email: 'faisalmanagementservicess@gmail.com',
+    email: 'info@faisalnepal.com',
     phone: '+977-14592271, 4592272',
     address: 'Pinglasthan-9, Bajreshwori Marg, Kathmandu, Nepal',
 };
