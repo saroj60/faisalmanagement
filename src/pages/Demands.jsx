@@ -93,9 +93,13 @@ const Demands = () => {
                                             <span className="flex items-center text-gray-600"><Users size={16} className="mr-2 text-blue-600" /> Workers Needed</span>
                                             <span className="font-semibold">{demand.workers}</span>
                                         </div>
-                                        <div className="flex justify-between items-center text-sm">
+                                        <div className="flex justify-between items-center text-sm border-b border-gray-50 pb-2">
                                             <span className="flex items-center text-gray-600"><Calendar size={16} className="mr-2 text-orange-600" /> Start Date</span>
                                             <span className="font-semibold">{demand.startDate}</span>
+                                        </div>
+                                        <div className="flex justify-between items-center text-sm">
+                                            <span className="flex items-center text-gray-600"><Calendar size={16} className="mr-2 text-red-600" /> End Date</span>
+                                            <span className="font-semibold">{demand.endDate}</span>
                                         </div>
                                     </div>
 
