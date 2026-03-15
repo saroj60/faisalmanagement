@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import Section from '../components/ui/Section';
 import Card from '../components/ui/Card';
 import Button from '../components/ui/Button';
@@ -7,6 +7,31 @@ import TextArea from '../components/ui/TextArea';
 import { CheckCircle } from 'lucide-react';
 
 const Employers = () => {
+    const [formData, setFormData] = useState({
+        companyName: '',
+        contactPerson: '',
+        email: '',
+        phone: '',
+        industry: '',
+        requirements: ''
+    });
+
+    const handleChange = (e) => {
+        setFormData({
+            ...formData,
+            [e.target.name]: e.target.value
+        });
+    };
+
+    const handleSubmit = (e) => {
+        e.preventDefault();
+        
+        const phoneNumber = '9779827703356';
+        const text = `*New Manpower Request*%0A%0A*Company:* ${formData.companyName}%0A*Contact Person:* ${formData.contactPerson}%0A*Email:* ${formData.email}%0A*Phone:* ${formData.phone}%0A*Industry:* ${formData.industry}%0A*Requirements:* ${formData.requirements}`;
+        
+        window.open(`https://wa.me/${phoneNumber}?text=${text}`, '_blank');
+    };
+
     return (
         <>
             <div className="bg-primary text-white py-20">
@@ -27,19 +52,62 @@ const Employers = () => {
                             Fill out the form below to let us know your requirements. Our team will get back to you within 24 hours.
                         </p>
 
-                        <form className="space-y-4">
+                        <form className="space-y-4" onSubmit={handleSubmit}>
                             <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                                <Input label="Company Name" placeholder="Enter company name" />
-                                <Input label="Contact Person" placeholder="Enter full name" />
+                                <Input 
+                                    label="Company Name" 
+                                    name="companyName"
+                                    placeholder="Enter company name" 
+                                    required
+                                    value={formData.companyName}
+                                    onChange={handleChange}
+                                />
+                                <Input 
+                                    label="Contact Person" 
+                                    name="contactPerson"
+                                    placeholder="Enter full name" 
+                                    required
+                                    value={formData.contactPerson}
+                                    onChange={handleChange}
+                                />
                             </div>
                             <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                                <Input label="Email Address" type="email" placeholder="name@company.com" />
-                                <Input label="Phone Number" placeholder="+971 50 000 0000" />
+                                <Input 
+                                    label="Email Address" 
+                                    type="email" 
+                                    name="email"
+                                    placeholder="name@company.com" 
+                                    required
+                                    value={formData.email}
+                                    onChange={handleChange}
+                                />
+                                <Input 
+                                    label="Phone Number" 
+                                    name="phone"
+                                    placeholder="+971 50 000 0000" 
+                                    required
+                                    value={formData.phone}
+                                    onChange={handleChange}
+                                />
                             </div>
-                            <Input label="Industry" placeholder="e.g. Construction, Hospitality" />
-                            <TextArea label="Requirements Details" placeholder="Describe the number of workers, job roles, and specific skills needed..." />
+                            <Input 
+                                label="Industry" 
+                                name="industry"
+                                placeholder="e.g. Construction, Hospitality" 
+                                required
+                                value={formData.industry}
+                                onChange={handleChange}
+                            />
+                            <TextArea 
+                                label="Requirements Details" 
+                                name="requirements"
+                                placeholder="Describe the number of workers, job roles, and specific skills needed..." 
+                                required
+                                value={formData.requirements}
+                                onChange={handleChange}
+                            />
 
-                            <Button size="lg" className="w-full">Submit Request</Button>
+                            <Button size="lg" className="w-full" type="submit">Submit Request</Button>
                         </form>
                     </div>
 

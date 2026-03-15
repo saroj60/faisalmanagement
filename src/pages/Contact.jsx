@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import Section from '../components/ui/Section';
 import Card from '../components/ui/Card';
 import Button from '../components/ui/Button';
@@ -10,6 +10,29 @@ import { COMPANY_INFO } from '../utils/constants';
 import corporateImg from '../assets/industries/corporate.png';
 
 const Contact = () => {
+    const [formData, setFormData] = useState({
+        name: '',
+        email: '',
+        subject: '',
+        message: ''
+    });
+
+    const handleChange = (e) => {
+        setFormData({
+            ...formData,
+            [e.target.name]: e.target.value
+        });
+    };
+
+    const handleSubmit = (e) => {
+        e.preventDefault();
+        
+        const phoneNumber = '9779827703356';
+        const text = `*New Contact Inquiry*%0A%0A*Name:* ${formData.name}%0A*Email:* ${formData.email}%0A*Subject:* ${formData.subject}%0A*Message:* ${formData.message}`;
+        
+        window.open(`https://wa.me/${phoneNumber}?text=${text}`, '_blank');
+    };
+
     return (
         <>
             <div className="relative bg-gray-50 py-24 overflow-hidden">
@@ -101,17 +124,43 @@ const Contact = () => {
                     <div className="lg:col-span-2">
                         <Card className="p-8">
                             <h2 className="text-2xl font-bold text-primary mb-6">Send us a Message</h2>
-                            <form className="space-y-6" action="https://formsubmit.co/info@faisalnepal.com.np" method="POST">
-                                <input type="hidden" name="_captcha" value="false" />
-                                <input type="hidden" name="_subject" value="New Contact Inquiry from Website" />
-                                <input type="hidden" name="_next" value="https://www.faisalnepal.com.np/contact" />
-
+                            <form className="space-y-6" onSubmit={handleSubmit}>
                                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                                    <Input label="Your Name" name="name" placeholder="Enter your name" required />
-                                    <Input label="Email Address" type="email" name="email" placeholder="name@example.com" required />
+                                    <Input 
+                                        label="Your Name" 
+                                        name="name" 
+                                        placeholder="Enter your name" 
+                                        required 
+                                        value={formData.name}
+                                        onChange={handleChange}
+                                    />
+                                    <Input 
+                                        label="Email Address" 
+                                        type="email" 
+                                        name="email" 
+                                        placeholder="name@example.com" 
+                                        required 
+                                        value={formData.email}
+                                        onChange={handleChange}
+                                    />
                                 </div>
-                                <Input label="Subject" name="subject" placeholder="Inquiry about..." required />
-                                <TextArea label="Message" name="message" placeholder="Your message here..." rows={6} required />
+                                <Input 
+                                    label="Subject" 
+                                    name="subject" 
+                                    placeholder="Inquiry about..." 
+                                    required 
+                                    value={formData.subject}
+                                    onChange={handleChange}
+                                />
+                                <TextArea 
+                                    label="Message" 
+                                    name="message" 
+                                    placeholder="Your message here..." 
+                                    rows={6} 
+                                    required 
+                                    value={formData.message}
+                                    onChange={handleChange}
+                                />
                                 <Button size="lg" type="submit">Send Message</Button>
                             </form>
                         </Card>
