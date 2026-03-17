@@ -115,6 +115,31 @@ app.post('/api/auth/login', async (req, res) => {
     }
 });
 
+app.post('/api/auth/change-password', authenticateToken, async (req, res) => {
+    const { currentPassword, newPassword } = req.body;
+    const username = req.user.username; // From authenticateToken middleware
+
+    try {
+        const user = await User.findOne({ username });
+        if (!user) {
+            return res.status(404).json({ message: 'User not found' });
+        }
+
+        // Verify current password
+        if (user.password !== currentPassword) {
+            return res.status(400).json({ message: 'Incorrect current password' });
+        }
+
+        // Update password
+        user.password = newPassword;
+        await user.save();
+
+        res.json({ message: 'Password changed successfully' });
+    } catch (err) {
+        res.status(500).json({ message: 'Server error during password change' });
+    }
+});
+
 // --- DEMAND ROUTES ---
 
 // Get all demands (Public)

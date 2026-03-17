@@ -5,9 +5,13 @@ import Button from '../../components/ui/Button';
 import Card from '../../components/ui/Card';
 import Section from '../../components/ui/Section';
 import API_BASE_URL from '../../config/api';
+import ChangePasswordModal from '../../components/admin/ChangePasswordModal';
+import { useAuth } from '../../context/AuthContext';
 
 const CreateDemand = () => {
     const navigate = useNavigate();
+    const { logout } = useAuth();
+    const [isPasswordModalOpen, setIsPasswordModalOpen] = useState(false);
     const [formData, setFormData] = useState({
         title: '',
         country: '',
@@ -60,7 +64,29 @@ const CreateDemand = () => {
     return (
         <Section>
             <div className="max-w-2xl mx-auto">
-                <Input label="Admin Dashboard" value="Create New Demand" readOnly className="mb-6 font-bold text-xl border-none p-0" />
+                <div className="flex justify-between items-center mb-6">
+                    <Input label="Admin Dashboard" value="Create New Demand" readOnly className="font-bold text-xl border-none p-0 flex-1" />
+                    <div className="flex space-x-4">
+                        <Button 
+                            variant="outline" 
+                            onClick={() => setIsPasswordModalOpen(true)}
+                            className="whitespace-nowrap"
+                        >
+                            Change Password
+                        </Button>
+                        <Button 
+                            variant="outline" 
+                            onClick={() => {
+                                logout();
+                                navigate('/admin/login');
+                            }}
+                            className="whitespace-nowrap text-red-600 border-red-200 hover:bg-red-50"
+                        >
+                            Logout
+                        </Button>
+                    </div>
+                </div>
+
                 <Card className="p-8 border border-gray-100 shadow-lg">
                     <form className="space-y-6" onSubmit={handleSubmit}>
                         <Input
@@ -126,6 +152,11 @@ const CreateDemand = () => {
                     </form>
                 </Card>
             </div>
+            
+            <ChangePasswordModal 
+                isOpen={isPasswordModalOpen} 
+                onClose={() => setIsPasswordModalOpen(false)} 
+            />
         </Section>
     );
 };
