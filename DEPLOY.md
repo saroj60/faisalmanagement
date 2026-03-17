@@ -64,8 +64,34 @@ You need to upload the backend code and the built frontend code.
 2.  Click **Restart Application**.
 3.  Open your website URL. You should see your application running!
 
+## Deployment on Render (Recommended for Persistence)
+
+Render's free tier uses an ephemeral filesystem. To ensure your demands and users persist, follow these steps:
+
+1.  **Set up MongoDB Atlas:**
+    *   Create a free account at [MongoDB Atlas](https://www.mongodb.com/cloud/atlas/register).
+    *   Deploy a "Shared" (Free) Cluster.
+    *   In "Network Access", allow your IP or `0.0.0.0/0` (for public access).
+    *   In "Database Access", create a user with a password.
+    *   Click "Connect" -> "Drivers" and copy the Connection String.
+
+2.  **Configure Render:**
+    *   Go to your Render Dashboard.
+    *   Select your Web Service.
+    *   Go to **Environment**.
+    *   Add the following Environment Variables:
+        *   `MONGODB_URI`: Paste your MongoDB Atlas connection string (replace `<password>` with your user password).
+        *   `SECRET_KEY`: A random string for JWT security.
+        *   `NODE_ENV`: `production`
+        *   `FRONTEND_URL`: Your frontend URL (e.g., `https://faisalnepal.com.np`).
+
+3.  **Redeploy:**
+    *   Push your code changes to GitHub. Render will automatically redeploy.
+    *   Check the logs to see the "Connected to MongoDB" message.
+
 ## Troubleshooting
 
-*   **Images not loading:** Check if `dist` folder has the assets.
-*   **API Errors:** Check `server/server.js` logs (often in `stderr.log` in the app root).
-*   **Database:** The app uses JSON files in `server/data`. These files are preserved on the server. If you redeploy, be careful not to overwrite `server/data` if you want to keep existing data.
+*   **Data disappears on Render:** This is why we migrated to MongoDB. Ensure `MONGODB_URI` is correctly set in Render's environment variables.
+*   **Images not loading:** Check if the built `dist` folder is uploaded/served correctly.
+*   **MongoDB Connection Error:** Verify your connection string and that `0.0.0.0/0` is allowed in MongoDB Atlas Network Access.
+*   **Default Admin:** The server automatically creates a default admin user `info@faisalnepal.com` with password `faisalmanagement@2026` if no users exist in the database.

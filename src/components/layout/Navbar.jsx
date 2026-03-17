@@ -39,8 +39,8 @@ const Navbar = () => {
                                 {link.name}
                             </Link>
                         ))}
-                        <Link to="/contact">
-                            <Button size="sm" className="bg-black text-white hover:bg-gray-900 border-none">Get Started</Button>
+                        <Link to="/portfolio">
+                            <Button size="sm" className="bg-black text-white hover:bg-gray-900 border-none">Portfolio</Button>
                         </Link>
                     </div>
 
@@ -80,8 +80,8 @@ const Navbar = () => {
                                 </Link>
                             ))}
                             <div className="mt-4">
-                                <Link to="/contact" onClick={() => setIsOpen(false)}>
-                                    <Button className="w-full bg-black text-white hover:bg-gray-900 border-none">Get Started</Button>
+                                <Link to="/portfolio" onClick={() => setIsOpen(false)}>
+                                    <Button className="w-full bg-black text-white hover:bg-gray-900 border-none">Portfolio</Button>
                                 </Link>
                             </div>
                         </div>

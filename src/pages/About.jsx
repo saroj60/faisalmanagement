@@ -2,6 +2,7 @@ import React from 'react';
 import Section from '../components/ui/Section';
 import { Target, Eye, Heart } from 'lucide-react';
 import Card from '../components/ui/Card';
+import { COMPANY_INFO } from '../utils/constants';
 import headerBg from '../assets/about-header.png';
 import mdPhoto from '../assets/chairman.jpg';
 import jaySahPhoto from '../assets/MD.png';
@@ -37,7 +38,7 @@ const About = () => {
                     <div>
                         <h2 className="text-3xl font-bold text-primary mb-6">Who We Are</h2>
                         <p className="text-gray-600 mb-4 leading-relaxed">
-                            Faisal Management is a premier human resources consultancy and recruitment agency established to bridge the gap between global employers and talented professionals. With over 15 years of experience, we have successfully deployed thousands of workers across various industries.
+                            Faisal Management (formerly known as {COMPANY_INFO.formerName}) is a premier human resources consultancy and recruitment agency established to bridge the gap between global employers and talented professionals. With over 15 years of experience, we have successfully deployed thousands of workers across various industries.
                         </p>
                         <p className="text-gray-600 leading-relaxed">
                             We specialize in understanding the unique needs of our clients and providing tailored solutions that ensure operational efficiency and business continuity.

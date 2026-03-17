@@ -13,15 +13,18 @@ const Footer = () => {
                     <div>
                         <h3 className="text-2xl font-bold font-heading mb-4">
                             {COMPANY_INFO.name}
+                            <span className="block text-sm font-normal text-gray-400 mt-1">
+                                (Formerly {COMPANY_INFO.formerName})
+                            </span>
                         </h3>
                         <p className="text-white mb-6 text-sm leading-relaxed">
                             Serving industries with skilled and unskilled manpower solutions. We connect talent with opportunity across the globe.
                         </p>
                         <div className="flex space-x-4">
-                            <a href="#" className="text-gray-400 hover:text-accent transition-colors"><Facebook size={20} /></a>
-                            <a href="#" className="text-gray-400 hover:text-accent transition-colors"><Twitter size={20} /></a>
-                            <a href="#" className="text-gray-400 hover:text-accent transition-colors"><Linkedin size={20} /></a>
-                            <a href="#" className="text-gray-400 hover:text-accent transition-colors"><Instagram size={20} /></a>
+                            <a href="https://www.facebook.com/share/1BRyNVwXkE/" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-accent transition-colors"><Facebook size={20} /></a>
+                            <a href="#" className="hidden text-gray-400 hover:text-accent transition-colors"><Twitter size={20} /></a>
+                            <a href="https://www.linkedin.com/in/jay-shah-572639235?utm_source=share_via&utm_content=profile&utm_medium=member_android" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-accent transition-colors"><Linkedin size={20} /></a>
+                            <a href="#" className="hidden text-gray-400 hover:text-accent transition-colors"><Instagram size={20} /></a>
                         </div>
                     </div>
 

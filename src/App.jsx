@@ -5,7 +5,7 @@ import Layout from './components/layout/Layout';
 import Home from './pages/Home';
 import About from './pages/About';
 import Services from './pages/Services';
-import Contact from './pages/Contact';
+import Portfolio from './pages/Portfolio';
 import Demands from './pages/Demands';
 import DemandDetails from './pages/DemandDetails';
 import Login from './pages/admin/Login';
@@ -36,7 +36,7 @@ function App() {
               <Route path="/demands" element={<Demands />} />
               <Route path="/demands/:id" element={<DemandDetails />} />
 
-              <Route path="/contact" element={<Contact />} />
+              <Route path="/portfolio" element={<Portfolio />} />
 
               {/* Admin Routes */}
               <Route path="/admin/login" element={<Login />} />

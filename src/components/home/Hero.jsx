@@ -1,6 +1,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
+import { COMPANY_INFO } from '../../utils/constants';
 import Button from '../ui/Button';
 import heroImage from '../../assets/hero-relationship.png';
 
@@ -20,6 +21,14 @@ const Hero = () => {
                         transition={{ duration: 0.8, delay: 0.2 }}
                         className="max-w-2xl lg:w-1/2 mb-10 lg:mb-0 z-20"
                     >
+                        <motion.span
+                            initial={{ opacity: 0, y: 10 }}
+                            animate={{ opacity: 1, y: 0 }}
+                            transition={{ duration: 0.6, delay: 0.1 }}
+                            className="inline-block bg-primary/10 text-primary px-3 py-1 rounded-full text-sm font-semibold mb-4"
+                        >
+                            Formerly {COMPANY_INFO.formerName}
+                        </motion.span>
                         <h1 className="text-4xl md:text-6xl font-bold text-primary mb-4 leading-tight">
                             Build Your <span className="text-accent">Dream Career</span> Abroad With Us
                         </h1>
@@ -33,9 +42,9 @@ const Hero = () => {
                             <Link to="/demands">
                                 <Button size="lg" className="w-full sm:w-auto">View Demand</Button>
                             </Link>
-                            <Link to="/contact">
+                            <Link to="/portfolio">
                                 <Button size="lg" variant="outline" className="w-full sm:w-auto text-primary border-primary hover:bg-primary hover:text-white">
-                                    Apply Now
+                                    View Portfolio
                                 </Button>
                             </Link>
                         </div>
