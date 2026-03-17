@@ -11,6 +11,7 @@ import DemandDetails from './pages/DemandDetails';
 import Login from './pages/admin/Login';
 import CreateDemand from './pages/admin/CreateDemand';
 import ProtectedRoute from './components/layout/ProtectedRoute';
+import Contact from './pages/Contact';
 import { AuthProvider } from './context/AuthContext';
 import { COMPANY_INFO } from './utils/constants';
 
@@ -37,6 +38,7 @@ function App() {
               <Route path="/demands/:id" element={<DemandDetails />} />
 
               <Route path="/portfolio" element={<Portfolio />} />
+              <Route path="/contact" element={<Contact />} />
 
               {/* Admin Routes */}
               <Route path="/admin/login" element={<Login />} />
