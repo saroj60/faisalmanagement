@@ -12,16 +12,29 @@ const Demands = () => {
     const [loading, setLoading] = useState(true);
     const { user } = useAuth();
     const isAdmin = user?.role === 'admin';
+    const [error, setError] = useState(null);
 
     const fetchDemands = () => {
         fetch(`${API_BASE_URL}/api/demands`)
-            .then(res => res.json())
+            .then(res => {
+                if (!res.ok) {
+                    throw new Error('Network response was not ok');
+                }
+                return res.json();
+            })
             .then(data => {
-                setDemands(data);
+                if (data && Array.isArray(data)) {
+                    setDemands(data);
+                } else {
+                    setDemands([]);
+                    setError("Received invalid data from server.");
+                }
                 setLoading(false);
             })
             .catch(err => {
                 console.error("Failed to fetch demands", err);
+                setError("Failed to load demands. Please try again later.");
+                setDemands([]);
                 setLoading(false);
             });
     };
@@ -68,6 +81,11 @@ const Demands = () => {
                 <div className="max-w-7xl mx-auto">
                     {loading ? (
                         <p className="text-center">Loading demands...</p>
+                    ) : error ? (
+                        <div className="text-center py-10">
+                            <h3 className="text-2xl text-red-600 mb-2">Oops! Something went wrong.</h3>
+                            <p className="text-gray-500">{error}</p>
+                        </div>
                     ) : demands.length === 0 ? (
                         <div className="text-center py-10">
                             <h3 className="text-2xl text-gray-600">No active demands at the moment.</h3>
