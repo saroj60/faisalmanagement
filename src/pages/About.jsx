@@ -9,6 +9,7 @@ import jaySahPhoto from '../assets/MD.png';
 import partnerPhoto from '../assets/partner.jpg';
 import registrationImg from '../assets/registration.png';
 import marketingManagerPhoto from '../assets/marketing manager.jpeg';
+import lisencePhoto from '../assets/lisence.jpeg';
 
 const values = [
     { title: 'Mission', icon: Target, desc: 'To provide world-class manpower solutions that drive business growth and individual success.', color: 'bg-blue-100 text-blue-600' },
@@ -169,65 +170,88 @@ const About = () => {
                 </div>
 
                 {/* Legal & Certifications */}
-                <div className="mb-24 bg-white rounded-3xl p-10 md:p-16 shadow-lg border border-gray-100 max-w-5xl mx-auto">
+                <div className="mb-24 bg-white rounded-3xl p-10 md:p-16 shadow-lg border border-gray-100 max-w-6xl mx-auto">
                     <div className="text-center mb-12">
                         <h2 className="text-3xl font-bold text-primary mb-4">Legal & Certifications</h2>
                         <div className="w-20 h-1 bg-blue-600 mx-auto rounded-full"></div>
-                        <p className="mt-6 text-gray-600 max-w-2xl mx-auto italic">
-                            "Committed to legal compliance, transparency, and the highest industry standards."
+                        <p className="mt-6 text-gray-600 max-w-3xl mx-auto italic">
+                            "Committed to legal compliance, transparency, and the highest industry standards. Our registrations ensure that we operate with full accountability and adherence to regulatory frameworks."
                         </p>
                     </div>
                     
-                    <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
-                        <div className="relative group cursor-pointer">
-                            <div className="absolute inset-0 bg-primary/5 rounded-xl transform transition-transform group-hover:scale-105 duration-300"></div>
-                            <img 
-                                src={registrationImg} 
-                                alt="Company Registration Certificate" 
-                                className="relative z-10 w-full h-auto rounded-xl shadow-2xl border-4 border-white transition-transform group-hover:scale-[1.02] duration-300"
-                            />
-                            <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity z-20">
-                                <a 
-                                    href={registrationImg} 
-                                    target="_blank" 
-                                    rel="noopener noreferrer"
-                                    className="bg-white/90 backdrop-blur-sm text-primary px-6 py-3 rounded-full font-bold shadow-xl hover:bg-white flex items-center gap-2 transform -translate-y-2 group-hover:translate-y-0 transition-transform"
-                                >
-                                    <Target size={20} /> View Full Document
-                                </a>
-                            </div>
-                        </div>
-                        
+                    <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
+                        {/* Company Registration */}
                         <div className="space-y-6">
-                            <div className="bg-blue-50 border-l-4 border-blue-500 p-6 rounded-r-xl">
-                                <h3 className="text-xl font-bold text-blue-900 mb-2">Certificate of Incorporation</h3>
-                                <p className="text-blue-800/80 leading-relaxed">
-                                    Faisal Management Services is a legally registered entity under the Office of the Company Registrar, Government of Nepal, pursuant to the Companies Act, 2006.
-                                </p>
+                            <h3 className="text-xl font-bold text-gray-800 border-b border-gray-100 pb-2">Company Registration</h3>
+                            <div className="relative group cursor-pointer h-80">
+                                <div className="absolute inset-0 bg-primary/5 rounded-xl transform transition-transform group-hover:scale-105 duration-300"></div>
+                                <img 
+                                    src={registrationImg} 
+                                    alt="Company Registration Certificate" 
+                                    className="relative z-10 w-full h-full object-cover rounded-xl shadow-xl border-4 border-white transition-transform group-hover:scale-[1.02] duration-300"
+                                />
+                                <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity z-20">
+                                    <a 
+                                        href={registrationImg} 
+                                        target="_blank" 
+                                        rel="noopener noreferrer"
+                                        className="bg-white/90 backdrop-blur-sm text-primary px-6 py-3 rounded-full font-bold shadow-xl hover:bg-white flex items-center gap-2 transform -translate-y-2 group-hover:translate-y-0 transition-transform"
+                                    >
+                                        <Target size={20} /> View Full Certificate
+                                    </a>
+                                </div>
                             </div>
-                            
-                            <div className="space-y-4">
-                                <div className="flex items-center gap-3 text-gray-700">
+                            <div className="bg-blue-50/50 p-6 rounded-xl space-y-3">
+                                <div className="flex items-center gap-3 text-gray-700 text-sm">
                                     <div className="w-2 h-2 bg-blue-600 rounded-full"></div>
                                     <span><strong>Registration No:</strong> 165229/73/74</span>
                                 </div>
-                                <div className="flex items-center gap-3 text-gray-700">
-                                    <div className="w-2 h-2 bg-blue-600 rounded-full"></div>
-                                    <span><strong>Entity Type:</strong> Private Limited Company</span>
-                                </div>
-                                <div className="flex items-center gap-3 text-gray-700">
+                                <div className="flex items-center gap-3 text-gray-700 text-sm">
                                     <div className="w-2 h-2 bg-blue-600 rounded-full"></div>
                                     <span><strong>Date of Incorporation:</strong> March 10, 2017</span>
                                 </div>
-                                <div className="flex items-center gap-3 text-gray-700">
+                                <div className="flex items-center gap-3 text-gray-700 text-sm">
                                     <div className="w-2 h-2 bg-blue-600 rounded-full"></div>
-                                    <span><strong>Status:</strong> Active & Compliant</span>
+                                    <span><strong>Authority:</strong> Office of the Company Registrar, Nepal</span>
                                 </div>
                             </div>
-                            
-                            <p className="text-gray-500 text-sm leading-relaxed">
-                                Our registration ensures that we operate with full accountability and adherence to the regulatory frameworks governing recruitment and human resources management in Nepal.
-                            </p>
+                        </div>
+
+                        {/* Occupational License */}
+                        <div className="space-y-6">
+                            <h3 className="text-xl font-bold text-gray-800 border-b border-gray-100 pb-2">Occupational License</h3>
+                            <div className="relative group cursor-pointer h-80">
+                                <div className="absolute inset-0 bg-primary/5 rounded-xl transform transition-transform group-hover:scale-105 duration-300"></div>
+                                <img 
+                                    src={lisencePhoto} 
+                                    alt="Occupational License" 
+                                    className="relative z-10 w-full h-full object-cover rounded-xl shadow-xl border-4 border-white transition-transform group-hover:scale-[1.02] duration-300"
+                                />
+                                <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity z-20">
+                                    <a 
+                                        href={lisencePhoto} 
+                                        target="_blank" 
+                                        rel="noopener noreferrer"
+                                        className="bg-white/90 backdrop-blur-sm text-primary px-6 py-3 rounded-full font-bold shadow-xl hover:bg-white flex items-center gap-2 transform -translate-y-2 group-hover:translate-y-0 transition-transform"
+                                    >
+                                        <Target size={20} /> View Full License
+                                    </a>
+                                </div>
+                            </div>
+                            <div className="bg-green-50/50 p-6 rounded-xl space-y-3 border-l-4 border-green-500">
+                                <div className="flex items-center gap-3 text-gray-700 text-sm">
+                                    <div className="w-2 h-2 bg-green-600 rounded-full"></div>
+                                    <span><strong>Department:</strong> Department of Foreign Employment</span>
+                                </div>
+                                <div className="flex items-center gap-3 text-gray-700 text-sm">
+                                    <div className="w-2 h-2 bg-green-600 rounded-full"></div>
+                                    <span><strong>License No:</strong> 1289/074/75</span>
+                                </div>
+                                <div className="flex items-center gap-3 text-gray-700 text-sm">
+                                    <div className="w-2 h-2 bg-green-600 rounded-full"></div>
+                                    <span><strong>Status:</strong> Legally Authorized Agency</span>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
