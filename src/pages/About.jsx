@@ -7,6 +7,8 @@ import headerBg from '../assets/about-header.png';
 import mdPhoto from '../assets/chairman.jpg';
 import jaySahPhoto from '../assets/MD.png';
 import partnerPhoto from '../assets/partner.jpg';
+import registrationImg from '../assets/registration.png';
+import marketingManagerPhoto from '../assets/marketing manager.jpeg';
 
 const values = [
     { title: 'Mission', icon: Target, desc: 'To provide world-class manpower solutions that drive business growth and individual success.', color: 'bg-blue-100 text-blue-600' },
@@ -129,6 +131,32 @@ const About = () => {
                         </div>
                     </div>
                 </div>
+
+                {/* Marketing Manager - Abhishekh Singh Rajput */}
+                <div className="bg-white rounded-2xl p-8 md:p-12 mb-16 shadow-sm border border-gray-100 mt-8">
+                    <div className="flex flex-col md:flex-row gap-10 items-start">
+                        <div className="md:w-2/5">
+                            <div className="relative mx-auto w-full h-auto rounded-xl overflow-hidden shadow-lg border border-gray-100">
+                                <img
+                                    src={marketingManagerPhoto}
+                                    alt="Marketing Manager"
+                                    className="w-full h-auto"
+                                    onError={(e) => {
+                                        e.target.src = 'https://images.unsplash.com/photo-1560250097-0b93528c311a?q=80&w=1974&auto=format&fit=crop';
+                                    }}
+                                />
+                            </div>
+                        </div>
+                        <div className="md:w-3/5 text-center md:text-left">
+                            <h2 className="text-3xl font-bold text-primary mb-2">Marketing Manager</h2>
+                            <h3 className="text-xl font-semibold text-gray-700 mb-6">Abhishekh Singh Rajput</h3>
+
+                            <div className="space-y-4 text-gray-600 mb-6 text-lg leading-relaxed">
+                                <p>Abhishekh Singh Rajput is a dynamic and results-driven Marketing Manager at Faisal Management Services. With a deep understanding of market trends and a passion for building strategic partnerships, he leads our marketing initiatives to expand our global reach and connect talented professionals with world-class opportunities. His commitment to excellence and innovation ensures that our brand remains a trusted leader in the recruitment industry.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
                 </div>
 
 
@@ -138,6 +166,70 @@ const About = () => {
                     <p className="text-lg text-gray-600 leading-relaxed">
                         To envision a world where every individual has the opportunity to thrive through dignified employment, and every business can achieve its full potential with the right talent. We aim to set the benchmark for integrity, transparency, and excellence in the international recruitment industry, fostering long-term partnerships built on trust and mutual growth.
                     </p>
+                </div>
+
+                {/* Legal & Certifications */}
+                <div className="mb-24 bg-white rounded-3xl p-10 md:p-16 shadow-lg border border-gray-100 max-w-5xl mx-auto">
+                    <div className="text-center mb-12">
+                        <h2 className="text-3xl font-bold text-primary mb-4">Legal & Certifications</h2>
+                        <div className="w-20 h-1 bg-blue-600 mx-auto rounded-full"></div>
+                        <p className="mt-6 text-gray-600 max-w-2xl mx-auto italic">
+                            "Committed to legal compliance, transparency, and the highest industry standards."
+                        </p>
+                    </div>
+                    
+                    <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+                        <div className="relative group cursor-pointer">
+                            <div className="absolute inset-0 bg-primary/5 rounded-xl transform transition-transform group-hover:scale-105 duration-300"></div>
+                            <img 
+                                src={registrationImg} 
+                                alt="Company Registration Certificate" 
+                                className="relative z-10 w-full h-auto rounded-xl shadow-2xl border-4 border-white transition-transform group-hover:scale-[1.02] duration-300"
+                            />
+                            <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity z-20">
+                                <a 
+                                    href={registrationImg} 
+                                    target="_blank" 
+                                    rel="noopener noreferrer"
+                                    className="bg-white/90 backdrop-blur-sm text-primary px-6 py-3 rounded-full font-bold shadow-xl hover:bg-white flex items-center gap-2 transform -translate-y-2 group-hover:translate-y-0 transition-transform"
+                                >
+                                    <Target size={20} /> View Full Document
+                                </a>
+                            </div>
+                        </div>
+                        
+                        <div className="space-y-6">
+                            <div className="bg-blue-50 border-l-4 border-blue-500 p-6 rounded-r-xl">
+                                <h3 className="text-xl font-bold text-blue-900 mb-2">Certificate of Incorporation</h3>
+                                <p className="text-blue-800/80 leading-relaxed">
+                                    Faisal Management Services is a legally registered entity under the Office of the Company Registrar, Government of Nepal, pursuant to the Companies Act, 2006.
+                                </p>
+                            </div>
+                            
+                            <div className="space-y-4">
+                                <div className="flex items-center gap-3 text-gray-700">
+                                    <div className="w-2 h-2 bg-blue-600 rounded-full"></div>
+                                    <span><strong>Registration No:</strong> 165229/73/74</span>
+                                </div>
+                                <div className="flex items-center gap-3 text-gray-700">
+                                    <div className="w-2 h-2 bg-blue-600 rounded-full"></div>
+                                    <span><strong>Entity Type:</strong> Private Limited Company</span>
+                                </div>
+                                <div className="flex items-center gap-3 text-gray-700">
+                                    <div className="w-2 h-2 bg-blue-600 rounded-full"></div>
+                                    <span><strong>Date of Incorporation:</strong> March 10, 2017</span>
+                                </div>
+                                <div className="flex items-center gap-3 text-gray-700">
+                                    <div className="w-2 h-2 bg-blue-600 rounded-full"></div>
+                                    <span><strong>Status:</strong> Active & Compliant</span>
+                                </div>
+                            </div>
+                            
+                            <p className="text-gray-500 text-sm leading-relaxed">
+                                Our registration ensures that we operate with full accountability and adherence to the regulatory frameworks governing recruitment and human resources management in Nepal.
+                            </p>
+                        </div>
+                    </div>
                 </div>
 
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-8">

@@ -23,8 +23,16 @@ if (!MONGODB_URI) {
 
 // MongoDB Connection
 mongoose.connect(MONGODB_URI)
-    .then(() => console.log('Connected to MongoDB'))
-    .catch(err => console.error('MongoDB connection error:', err));
+    .then(() => {
+        console.log('Successfully connected to MongoDB Atlas');
+    })
+    .catch(err => {
+        console.error('CRITICAL: MongoDB connection error details:');
+        console.error('- Error Name:', err.name);
+        console.error('- Error Message:', err.message);
+        if (err.reason) console.error('- Reason:', err.reason);
+        console.error('Check your MONGODB_URI environment variable and IP whitelist on MongoDB Atlas.');
+    });
 
 // Schemas & Models
 const userSchema = new mongoose.Schema({
@@ -97,6 +105,28 @@ const authenticateToken = (req, res, next) => {
         next();
     });
 };
+
+// --- DIAGNOSTIC ROUTES ---
+
+// Root route to confirm server is up
+app.get('/', (req, res) => {
+    res.json({
+        status: 'running',
+        message: 'Faisal Management API is active',
+        timestamp: new Date().toISOString(),
+        environment: process.env.NODE_ENV || 'development'
+    });
+});
+
+// Health check route
+app.get('/api/health', (req, res) => {
+    const dbStatus = mongoose.connection.readyState === 1 ? 'connected' : 'disconnected';
+    res.json({
+        server: 'online',
+        database: dbStatus,
+        version: '1.0.0'
+    });
+});
 
 // --- AUTH ROUTES ---
 
@@ -202,6 +232,6 @@ app.delete('/api/demands/:id', authenticateToken, async (req, res) => {
 
 app.listen(PORT, () => {
     console.log(`Server running on http://localhost:${PORT}`);
+    console.log(`Diagnostic Root: http://localhost:${PORT}/`);
+    console.log(`Health Check: http://localhost:${PORT}/api/health`);
 });
-
-
