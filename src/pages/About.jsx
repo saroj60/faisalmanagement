@@ -6,7 +6,7 @@ import { COMPANY_INFO } from '../utils/constants';
 import headerBg from '../assets/about-header.png';
 import mdPhoto from '../assets/chairman.jpg';
 import jaySahPhoto from '../assets/MD.png';
-import partnerPhoto from '../assets/partner.jpg';
+import partnerPhoto from '../assets/partner NB.png';
 import registrationImg from '../assets/registration.png';
 import marketingManagerPhoto from '../assets/marketing manager.jpeg';
 import lisencePhoto from '../assets/lisence.jpeg';
@@ -122,8 +122,8 @@ const About = () => {
                             </div>
                         </div>
                         <div className="md:w-3/5 text-center md:text-left">
-                            <h2 className="text-3xl font-bold text-primary mb-2">Business Partner</h2>
-                            <h3 className="text-xl font-semibold text-gray-700 mb-6">Krishna H Adhikari</h3>
+                            <h2 className="text-3xl font-bold text-primary mb-2">HR & Business Partner</h2>
+                            <h3 className="text-xl font-semibold text-gray-700 mb-6">NB karki</h3>
 
                             <div className="space-y-4 text-gray-600 mb-6 text-lg leading-relaxed">
                                 <p>Working together to bridge the gap between global opportunities and local talent, ensuring excellence in every placement.</p>
