@@ -6,6 +6,7 @@ import Card from '../components/ui/Card';
 import Button from '../components/ui/Button';
 import { MapPin, DollarSign, Users, Calendar, ArrowRight, Trash2 } from 'lucide-react';
 import API_BASE_URL from '../config/api';
+import SEO from '../components/common/SEO';
 
 const Demands = () => {
     const [demands, setDemands] = useState([]);
@@ -68,6 +69,12 @@ const Demands = () => {
 
     return (
         <>
+            <SEO 
+                title="Current Overseas Job Demands & Vacancies"
+                description="Explore verified overseas jobs and manpower demand letters in Kuwait, UAE, Qatar, Saudi Arabia, Bahrain, and Malaysia. Apply for skilled and professional roles today."
+                keywords="Overseas Job Demands Nepal, Gulf Job Vacancies Kathmandu, Kuwait Jobs for Nepalese, Manpower Demand Letters Nepal"
+                canonicalPath="/demands"
+            />
             <div className="bg-primary text-white py-20">
                 <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
                     <h1 className="text-4xl md:text-5xl font-bold mb-6">Current Demands</h1>

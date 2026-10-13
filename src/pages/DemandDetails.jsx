@@ -5,6 +5,7 @@ import Section from '../components/ui/Section';
 import Card from '../components/ui/Card';
 import Button from '../components/ui/Button';
 import API_BASE_URL from '../config/api';
+import SEO from '../components/common/SEO';
 
 const DemandDetails = () => {
     const { id } = useParams();
@@ -27,8 +28,46 @@ const DemandDetails = () => {
     if (loading) return <Section><p className="text-center">Loading...</p></Section>;
     if (!demand) return <Section><p className="text-center">Demand not found.</p></Section>;
 
+    const jobSchema = demand ? {
+        "@context": "https://schema.org",
+        "@type": "JobPosting",
+        "title": demand.title,
+        "description": demand.description || `Overseas employment opportunity for ${demand.title} in ${demand.country}. Apply through Faisal Management Services.`,
+        "datePosted": demand.createdAt ? new Date(demand.createdAt).toISOString().split('T')[0] : "2026-01-01",
+        "validThrough": demand.endDate || "2026-12-31",
+        "employmentType": "FULL_TIME",
+        "hiringOrganization": {
+            "@type": "Organization",
+            "name": "Faisal Management Services LLC",
+            "sameAs": "https://faisalnepal.com.np",
+            "logo": "https://faisalnepal.com.np/favicon.png"
+        },
+        "jobLocation": {
+            "@type": "Place",
+            "address": {
+                "@type": "PostalAddress",
+                "addressCountry": demand.country
+            }
+        },
+        "baseSalary": {
+            "@type": "MonetaryAmount",
+            "currency": "AED",
+            "value": {
+                "@type": "QuantitativeValue",
+                "value": demand.salary || "Competitive"
+            }
+        }
+    } : null;
+
     return (
-        <Section>
+        <>
+            <SEO 
+                title={`${demand.title} in ${demand.country}`}
+                description={`Job vacancy for ${demand.title} in ${demand.country}. Salary: ${demand.salary || 'Competitive'}. Open positions: ${demand.workers || 'Multiple'}. Recruited by Faisal Management Services.`}
+                canonicalPath={`/demands/${id}`}
+                schema={jobSchema}
+            />
+            <Section>
             <div className="max-w-4xl mx-auto">
                 <Link to="/demands" className="flex items-center text-gray-600 hover:text-primary mb-6">
                     <ChevronLeft size={20} className="mr-1" /> Back to Demands
@@ -80,6 +119,7 @@ const DemandDetails = () => {
                 </Card>
             </div>
         </Section>
+        </>
     );
 };
 

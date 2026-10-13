@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import SEO from '../components/common/SEO';
 import Section from '../components/ui/Section';
 import { motion, AnimatePresence } from 'framer-motion';
 import { X, ZoomIn } from 'lucide-react';
@@ -19,6 +20,12 @@ const Portfolio = () => {
 
     return (
         <>
+            <SEO 
+                title="Our Portfolio - Past Overseas Demand Letters & Deployments"
+                description="Explore verified overseas recruitment demand letters and successful deployments processed by Faisal Management across UAE, Qatar, Malaysia, and Kuwait."
+                keywords="Manpower Portfolio Nepal, Overseas Demand Letters Kathmandu, Verified Demand Letters Gulf, Overseas Recruitment Records"
+                canonicalPath="/portfolio"
+            />
             {/* Header Section */}
             <div className="bg-primary text-white py-20 relative overflow-hidden">
                 <div className="absolute inset-0 opacity-10 bg-[url('https://images.unsplash.com/photo-1586717791821-3f44a563cc4c?q=80&w=2070&auto=format&fit=crop')] bg-cover bg-center"></div>

@@ -7,9 +7,23 @@ export const NAV_LINKS = [
 ];
 
 export const COMPANY_INFO = {
-    name: 'Faisal Management',
+    name: 'Faisal Management Services LLC',
+    shortName: 'Faisal Management',
+    arabicName: 'شركة فيصل لخدمات الإدارة ذ.م.م',
     formerName: 'Sony International Pvt. Ltd.',
+    tagline: 'Facilitate For Quality Support',
     email: 'info@faisalnepal.com.np',
     phone: '+977-14592271, 4592272',
     address: 'Pinglasthan-9, Bajreshwori Marg, Kathmandu, Nepal',
+
+    // Kuwait Office Information
+    kuwaitOffice: {
+        country: 'Kuwait',
+        address: 'Jleeb Al Shyoukh - Al Sour - Complex Road - 50, Floor - 2',
+        phone: '+965 95554055',
+        email: 'sherpa@faisalmanagement.com.np',
+        crNumber: '2020/19741',
+        managingDirector: 'Mr. Sherpa',
+        title: 'Managing Director',
+    },
 };

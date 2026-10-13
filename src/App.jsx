@@ -21,8 +21,8 @@ function App() {
   return (
     <HelmetProvider>
       <Helmet>
-        <title>{COMPANY_INFO.name} - Global Manpower Solutions</title>
-        <meta name="description" content="Leading manpower recruitment agency providing skilled and unskilled workforce for construction, hospitality, oil & gas, and corporate sectors." />
+        <title>{COMPANY_INFO.name} - Premier Manpower Recruitment Agency in Nepal</title>
+        <meta name="description" content="Govt. Authorized Manpower Agency in Nepal (Lic. No. 1289/074/75) connecting skilled talent with employers in Kuwait, UAE, Qatar, Saudi Arabia & Malaysia." />
       </Helmet>
       <AuthProvider>
         <Router>

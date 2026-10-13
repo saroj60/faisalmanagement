@@ -83,7 +83,7 @@ const allowedOrigins = [
 app.use(cors({
     origin: (origin, callback) => {
         if (!origin) return callback(null, true);
-        if (allowedOrigins.includes(origin) || origin.includes('vercel.app') || origin.includes('onrender.com')) {
+        if (allowedOrigins.includes(origin) || /^http:\/\/localhost:\d+$/.test(origin) || origin.includes('vercel.app') || origin.includes('onrender.com')) {
             return callback(null, true);
         }
         return callback(new Error('Not allowed by CORS'));

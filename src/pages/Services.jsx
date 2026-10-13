@@ -1,4 +1,5 @@
 import React from 'react';
+import SEO from '../components/common/SEO';
 import Section from '../components/ui/Section';
 import { motion } from 'framer-motion';
 
@@ -38,7 +39,14 @@ const servicesList = [
 
 const Services = () => {
     return (
-        <div className="bg-gray-50 min-h-screen">
+        <>
+            <SEO 
+                title="Our Recruitment & Manpower Services"
+                description="Specialized manpower recruitment services across Construction, Hospitality, Logistics, Maintenance, Manufacturing, and Healthcare for international employers."
+                keywords="Manpower Recruitment Services Nepal, Overseas Staffing Solutions, Construction Workers Recruitment, Hospitality Recruitment Nepal, Logistics Workforce Gulf"
+                canonicalPath="/services"
+            />
+            <div className="bg-gray-50 min-h-screen">
             <div className="relative bg-gray-50 py-24 overflow-hidden">
                 <div className="absolute inset-0 z-0">
                     <img
@@ -89,7 +97,8 @@ const Services = () => {
                     ))}
                 </div>
             </Section>
-        </div>
+            </div>
+        </>
     );
 };
 

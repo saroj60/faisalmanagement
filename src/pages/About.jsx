@@ -1,15 +1,18 @@
 import React from 'react';
 import Section from '../components/ui/Section';
-import { Target, Eye, Heart } from 'lucide-react';
+import { Target, Eye, Heart, Phone, Mail, MapPin } from 'lucide-react';
 import Card from '../components/ui/Card';
 import { COMPANY_INFO } from '../utils/constants';
 import headerBg from '../assets/about-header.png';
 import mdPhoto from '../assets/chairman.jpg';
 import jaySahPhoto from '../assets/MD.png';
+import mrSherpaPhoto from '../assets/mr_sherpa.jpg';
 import partnerPhoto from '../assets/partner NB.png';
 import registrationImg from '../assets/registration.png';
 import marketingManagerPhoto from '../assets/marketing manager.jpeg';
 import lisencePhoto from '../assets/lisence.jpeg';
+import EmbassyClients from '../components/common/EmbassyClients';
+import SEO from '../components/common/SEO';
 
 const values = [
     { title: 'Mission', icon: Target, desc: 'To provide world-class manpower solutions that drive business growth and individual success.', color: 'bg-blue-100 text-blue-600' },
@@ -18,8 +21,37 @@ const values = [
 ];
 
 const About = () => {
+    const aboutSchema = {
+        "@context": "https://schema.org",
+        "@type": "AboutPage",
+        "name": "About Faisal Management Services LLC",
+        "description": "Company profile, government registration 165229/73/74, license 1289/074/75, Kuwait C.R. 2020/19741, Chairman Jay Sah and Managing Director Mr. Sherpa.",
+        "url": "https://faisalnepal.com.np/about",
+        "mainEntity": {
+            "@type": "EmploymentAgency",
+            "name": "Faisal Management Services LLC",
+            "founder": {
+                "@type": "Person",
+                "name": "Jay Sah",
+                "jobTitle": "Chairman"
+            },
+            "employee": {
+                "@type": "Person",
+                "name": "Mr. Sherpa",
+                "jobTitle": "Managing Director"
+            }
+        }
+    };
+
     return (
         <>
+            <SEO 
+                title="About Us - Leadership, Licenses & Embassy Registered Clients"
+                description="Learn about Faisal Management Services (formerly Sony International), led by Chairman Jay Sah and Managing Director Mr. Sherpa. Verified government licenses and 49+ Kuwait Embassy registered employers."
+                keywords="About Faisal Management, Jay Sah Chairman, Mr. Sherpa Managing Director, Kuwait Embassy Registration, Nepal Manpower License 1289/074/75, Sony International Nepal"
+                canonicalPath="/about"
+                schema={aboutSchema}
+            />
             <div className="relative bg-gray-50 py-24 overflow-hidden">
                 <div className="absolute inset-0 z-0">
                     <img
@@ -76,6 +108,55 @@ const About = () => {
                                 <p>Our business is driven by a service-oriented mission that creates employment opportunities and helps improve the economic conditions of underprivileged and backward communities in society.</p>
                                 <p>Faisal Management Services is a professional HR, recruitment, selection, outsourcing, and manpower sourcing company. We provide all categories of workers—professional, skilled, semi-skilled, and unskilled—from Nepal to various companies for their projects in the U.A.E., Qatar, Saudi Arabia, Oman, Kuwait, Bahrain, and Malaysia.</p>
                                 <p>We hereby assure you of our quality services and look forward to better cooperation in the future.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    {/* Managing Director - Mr. Sherpa */}
+                    <div className="bg-white rounded-2xl p-8 md:p-12 mb-8 shadow-sm border border-gray-100 mt-12">
+                        <div className="flex flex-col md:flex-row-reverse gap-10 items-start">
+                            <div className="md:w-2/5">
+                                <div className="relative mx-auto w-full h-auto rounded-xl overflow-hidden shadow-lg border border-gray-100">
+                                    <img
+                                        src={mrSherpaPhoto}
+                                        alt="Managing Director"
+                                        className="w-full h-auto object-cover"
+                                        onError={(e) => {
+                                            e.target.src = 'https://images.unsplash.com/photo-1560250097-0b93528c311a?q=80&w=1974&auto=format&fit=crop';
+                                        }}
+                                    />
+                                </div>
+                            </div>
+                            <div className="md:w-3/5 text-center md:text-left">
+                                <h2 className="text-3xl font-bold text-primary mb-2">Managing Director</h2>
+                                <h3 className="text-xl font-semibold text-gray-700 mb-6">Mr. Sherpa</h3>
+
+                                <div className="space-y-4 text-gray-600 mb-6 text-lg leading-relaxed">
+                                    <p>Mr. Sherpa serves as the Managing Director of Faisal Management Services, leading executive strategy, organizational excellence, and international operations.</p>
+                                    <p>With an unwavering commitment to transparent and ethical manpower solutions, he spearheads relationships with global employers across the Middle East and East Asia. His visionary leadership ensures that every placement meets the highest standards of safety, professionalism, and mutual growth—bridging opportunities for skilled Nepali talent with trusted international corporations.</p>
+                                </div>
+
+                                {/* Direct Contact Info */}
+                                <div className="pt-4 border-t border-gray-100 flex flex-wrap gap-3 text-xs md:text-sm">
+                                    <a
+                                        href="tel:+96595554055"
+                                        className="inline-flex items-center gap-2 bg-blue-50 text-primary hover:bg-primary hover:text-white px-3.5 py-1.5 rounded-full font-semibold transition-colors"
+                                    >
+                                        <Phone size={14} />
+                                        <span>+965 95554055</span>
+                                    </a>
+                                    <a
+                                        href="mailto:sherpa@faisalmanagement.com.np"
+                                        className="inline-flex items-center gap-2 bg-gray-100 text-gray-700 hover:bg-primary hover:text-white px-3.5 py-1.5 rounded-full font-semibold transition-colors"
+                                    >
+                                        <Mail size={14} />
+                                        <span>sherpa@faisalmanagement.com.np</span>
+                                    </a>
+                                    <div className="inline-flex items-center gap-1.5 bg-emerald-50 text-emerald-800 px-3.5 py-1.5 rounded-full font-medium">
+                                        <MapPin size={14} className="text-emerald-600" />
+                                        <span>Kuwait Office: Jleeb Al Shyoukh, Al Sour (C.R. 2020/19741)</span>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -254,6 +335,11 @@ const About = () => {
                             </div>
                         </div>
                     </div>
+                </div>
+
+                {/* Embassy Registered Clients */}
+                <div id="clients">
+                    <EmbassyClients />
                 </div>
 
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
