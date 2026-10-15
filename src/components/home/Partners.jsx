@@ -9,17 +9,17 @@ const PartnerLogos = () => {
     const featuredClients = EMBASSY_CLIENTS.slice(0, 12);
 
     return (
-        <Section className="py-20 bg-gradient-to-b from-slate-100/80 via-blue-50/40 to-slate-100/80 border-y border-slate-200/80">
+        <Section className="py-10 sm:py-16 md:py-20 bg-gradient-to-b from-slate-100/80 via-blue-50/40 to-slate-100/80 border-y border-slate-200/80">
             {/* High-Visibility Header */}
-            <div className="text-center max-w-3xl mx-auto mb-14">
-                <div className="inline-flex items-center gap-2 bg-emerald-100 text-emerald-900 border border-emerald-300/80 px-4 py-2 rounded-full text-xs sm:text-sm font-extrabold uppercase tracking-wider mb-4 shadow-sm">
-                    <ShieldCheck size={18} className="text-emerald-700" />
+            <div className="text-center max-w-3xl mx-auto mb-8 sm:mb-14">
+                <div className="inline-flex items-center gap-2 bg-emerald-100 text-emerald-900 border border-emerald-300/80 px-3.5 py-1.5 sm:px-4 sm:py-2 rounded-full text-xs sm:text-sm font-extrabold uppercase tracking-wider mb-3 sm:mb-4 shadow-sm">
+                    <ShieldCheck size={18} className="text-emerald-700 shrink-0" />
                     <span>Kuwait Embassy Registered Employers</span>
                 </div>
-                <h2 className="text-3xl sm:text-4xl md:text-5xl font-black text-slate-900 tracking-tight leading-tight mb-4">
+                <h2 className="text-2xl sm:text-4xl md:text-5xl font-black text-slate-900 tracking-tight leading-tight mb-3 sm:mb-4">
                     Trusted by 49+ Industry Leaders Across <span className="text-primary underline decoration-accent decoration-4 underline-offset-8">Kuwait & Gulf</span>
                 </h2>
-                <p className="text-base sm:text-lg text-slate-700 font-medium max-w-2xl mx-auto">
+                <p className="text-sm sm:text-base md:text-lg text-slate-700 font-medium max-w-2xl mx-auto">
                     Authorized workforce supplier officially approved to deploy manpower to leading enterprises, factories, and commercial corporations.
                 </p>
             </div>
@@ -77,13 +77,13 @@ const PartnerLogos = () => {
             </div>
 
             {/* High-Visibility Call To Action */}
-            <div className="text-center">
+            <div className="text-center px-2">
                 <Link
                     to="/about#clients"
-                    className="inline-flex items-center gap-3 bg-primary hover:bg-accent text-white px-8 py-4 rounded-full font-extrabold text-base sm:text-lg shadow-xl hover:shadow-2xl hover:scale-105 transition-all duration-300"
+                    className="inline-flex items-center justify-center gap-2 sm:gap-3 bg-primary hover:bg-accent text-white px-5 py-3.5 sm:px-8 sm:py-4 rounded-full font-extrabold text-sm sm:text-lg shadow-xl hover:shadow-2xl hover:scale-105 transition-all duration-300 max-w-full"
                 >
                     <span>View All 49+ Embassy Registered Clients</span>
-                    <ArrowRight size={20} className="group-hover:translate-x-1.5 transition-transform" />
+                    <ArrowRight size={18} className="shrink-0 group-hover:translate-x-1.5 transition-transform" />
                 </Link>
                 <p className="text-xs text-slate-500 font-semibold mt-3">
                     Includes official embassy registration numbers, sector categorizations, and document viewer.

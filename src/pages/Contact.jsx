@@ -42,7 +42,7 @@ const Contact = () => {
                 keywords="Contact Faisal Management, Manpower Office Kathmandu, Recruitment Agency Pinglasthan, Nepal Manpower Phone Number"
                 canonicalPath="/contact"
             />
-            <div className="relative bg-gray-50 py-24 overflow-hidden">
+            <div className="relative bg-gray-50 py-12 sm:py-20 overflow-hidden">
                 <div className="absolute inset-0 z-0">
                     <img
                         src={corporateImg}
@@ -51,8 +51,8 @@ const Contact = () => {
                     />
                 </div>
                 <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-                    <h1 className="text-4xl md:text-5xl font-bold mb-6 text-primary">Contact Us</h1>
-                    <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+                    <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-3 sm:mb-6 text-primary">Contact Us</h1>
+                    <p className="text-base sm:text-xl text-gray-600 max-w-3xl mx-auto">
                         Get in touch with us for any inquiries or support.
                     </p>
                 </div>
@@ -85,12 +85,14 @@ const Contact = () => {
                                                 {COMPANY_INFO.kuwaitOffice.phone}
                                             </a>
                                         </div>
-                                        <div className="flex items-center">
-                                            <Mail size={14} className="text-accent mr-2 shrink-0" />
-                                            <a href={`mailto:${COMPANY_INFO.kuwaitOffice.email}`} className="text-gray-600 hover:text-primary hover:underline">
-                                                {COMPANY_INFO.kuwaitOffice.email}
-                                            </a>
-                                        </div>
+                                        {COMPANY_INFO.kuwaitOffice.email && (
+                                            <div className="flex items-center">
+                                                <Mail size={14} className="text-accent mr-2 shrink-0" />
+                                                <a href={`mailto:${COMPANY_INFO.kuwaitOffice.email}`} className="text-gray-600 hover:text-primary hover:underline">
+                                                    {COMPANY_INFO.kuwaitOffice.email}
+                                                </a>
+                                            </div>
+                                        )}
                                         <p className="text-[11px] text-gray-500 pt-1">
                                             <strong>Director:</strong> {COMPANY_INFO.kuwaitOffice.managingDirector} ({COMPANY_INFO.kuwaitOffice.title})
                                         </p>
@@ -161,10 +163,10 @@ const Contact = () => {
                     </div>
 
                     <div className="lg:col-span-2">
-                        <Card className="p-8">
-                            <h2 className="text-2xl font-bold text-primary mb-6">Send us a Message</h2>
-                            <form className="space-y-6" onSubmit={handleSubmit}>
-                                <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                        <Card className="p-5 sm:p-8">
+                            <h2 className="text-xl sm:text-2xl font-bold text-primary mb-4 sm:mb-6">Send us a Message</h2>
+                            <form className="space-y-4 sm:space-y-6" onSubmit={handleSubmit}>
+                                <div className="grid grid-cols-1 md:grid-cols-2 gap-4 sm:gap-6">
                                     <Input 
                                         label="Your Name" 
                                         name="name" 
@@ -195,12 +197,12 @@ const Contact = () => {
                                     label="Message" 
                                     name="message" 
                                     placeholder="Your message here..." 
-                                    rows={6} 
+                                    rows={5} 
                                     required 
                                     value={formData.message}
                                     onChange={handleChange}
                                 />
-                                <Button size="lg" type="submit">Send Message</Button>
+                                <Button size="lg" type="submit" className="w-full sm:w-auto">Send Message</Button>
                             </form>
                         </Card>
                     </div>

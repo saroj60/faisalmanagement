@@ -10,7 +10,7 @@ const Input = ({ label, id, error, className, ...props }) => {
             )}
             <input
                 id={id}
-                className={`w-full px-4 py-2 border rounded-md focus:ring-2 focus:ring-primary focus:border-transparent transition-colors outline-none ${error ? 'border-red-500' : 'border-gray-300'
+                className={`w-full px-4 py-2.5 text-base sm:text-sm border rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent transition-colors outline-none ${error ? 'border-red-500' : 'border-gray-300'
                     }`}
                 {...props}
             />

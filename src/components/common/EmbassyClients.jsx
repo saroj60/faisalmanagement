@@ -28,72 +28,72 @@ const EmbassyClients = ({ title = "Our Valued Global Clients", subtitle = "Embas
     }, [searchQuery, selectedSector]);
 
     return (
-        <div className="w-full my-16 bg-gradient-to-b from-slate-100/90 via-blue-50/40 to-slate-100/90 p-5 sm:p-8 md:p-12 rounded-3xl border-2 border-slate-200/90 shadow-md">
+        <div className="w-full my-8 sm:my-16 bg-gradient-to-b from-slate-100/90 via-blue-50/40 to-slate-100/90 p-3.5 sm:p-6 md:p-12 rounded-2xl md:rounded-3xl border-2 border-slate-200/90 shadow-md">
             {/* Header Banner */}
-            <div className="bg-gradient-to-br from-primary via-primary-dark to-slate-900 rounded-2xl md:rounded-3xl p-8 md:p-12 text-white shadow-xl relative overflow-hidden mb-10 border border-slate-700/50">
+            <div className="bg-gradient-to-br from-primary via-primary-dark to-slate-900 rounded-2xl md:rounded-3xl p-5 sm:p-8 md:p-12 text-white shadow-xl relative overflow-hidden mb-8 sm:mb-10 border border-slate-700/50">
                 <div className="absolute top-0 right-0 -mr-16 -mt-16 w-80 h-80 rounded-full bg-accent/15 blur-3xl pointer-events-none"></div>
                 <div className="relative z-10">
-                    <div className="flex flex-wrap items-center justify-between gap-4 mb-6">
-                        <div className="inline-flex items-center gap-2 bg-emerald-500/20 backdrop-blur-md px-4 py-2 rounded-full text-xs md:text-sm font-extrabold tracking-wide text-emerald-300 border border-emerald-400/30 shadow-inner">
-                            <ShieldCheck className="text-emerald-400" size={18} />
+                    <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-3 sm:gap-4 mb-5 sm:mb-6">
+                        <div className="inline-flex items-center gap-2 bg-emerald-500/20 backdrop-blur-md px-3.5 py-1.5 sm:px-4 sm:py-2 rounded-full text-[11px] sm:text-xs md:text-sm font-extrabold tracking-wide text-emerald-300 border border-emerald-400/30 shadow-inner w-fit">
+                            <ShieldCheck className="text-emerald-400 shrink-0" size={16} />
                             <span>OFFICIAL EMBASSY REGISTRATION RECORD</span>
                         </div>
 
                         <button
                             onClick={() => setShowDocModal(true)}
-                            className="inline-flex items-center gap-2 bg-accent hover:bg-accent/90 text-white px-5 py-2.5 rounded-full text-sm font-extrabold transition-all hover:scale-105 shadow-lg"
+                            className="inline-flex items-center justify-center gap-2 bg-accent hover:bg-accent/90 text-white px-4 sm:px-5 py-2 sm:py-2.5 rounded-full text-xs sm:text-sm font-extrabold transition-all hover:scale-105 shadow-lg w-full sm:w-auto"
                         >
-                            <FileCheck size={18} />
+                            <FileCheck size={16} />
                             <span>View Original Embassy Document</span>
                         </button>
                     </div>
 
-                    <h2 className="text-3xl sm:text-4xl md:text-5xl font-black tracking-tight mb-4">
+                    <h2 className="text-2xl sm:text-4xl md:text-5xl font-black tracking-tight mb-3 sm:mb-4">
                         {title}
                     </h2>
-                    <p className="text-base sm:text-lg text-slate-200 max-w-3xl leading-relaxed font-medium">
+                    <p className="text-sm sm:text-base md:text-lg text-slate-200 max-w-3xl leading-relaxed font-medium">
                         Faisal Management Services is officially registered and approved by the Embassy of Kuwait. Below is the verified roster of corporate partners, industrial factories, and commercial enterprises we actively supply manpower to.
                     </p>
 
                     {/* Quick Stats Badges */}
-                    <div className="grid grid-cols-2 sm:grid-cols-4 gap-4 mt-8 pt-8 border-t border-white/15 text-center">
-                        <div className="bg-white/10 rounded-2xl p-4 border border-white/15 backdrop-blur-sm shadow-inner">
-                            <div className="text-3xl sm:text-4xl font-black text-amber-300 mb-1">49+</div>
-                            <div className="text-xs uppercase font-bold tracking-wider text-slate-200">Registered Clients</div>
+                    <div className="grid grid-cols-2 sm:grid-cols-4 gap-2.5 sm:gap-4 mt-6 sm:mt-8 pt-6 sm:pt-8 border-t border-white/15 text-center">
+                        <div className="bg-white/10 rounded-xl sm:rounded-2xl p-2.5 sm:p-4 border border-white/15 backdrop-blur-sm shadow-inner">
+                            <div className="text-2xl sm:text-4xl font-black text-amber-300 mb-0.5 sm:mb-1">49+</div>
+                            <div className="text-[10px] sm:text-xs uppercase font-bold tracking-wider text-slate-200">Registered Clients</div>
                         </div>
-                        <div className="bg-white/10 rounded-2xl p-4 border border-white/15 backdrop-blur-sm shadow-inner">
-                            <div className="text-3xl sm:text-4xl font-black text-emerald-400 mb-1">Kuwait 🇰🇼</div>
-                            <div className="text-xs uppercase font-bold tracking-wider text-slate-200">Primary Gulf Hub</div>
+                        <div className="bg-white/10 rounded-xl sm:rounded-2xl p-2.5 sm:p-4 border border-white/15 backdrop-blur-sm shadow-inner">
+                            <div className="text-2xl sm:text-4xl font-black text-emerald-400 mb-0.5 sm:mb-1">Kuwait 🇰🇼</div>
+                            <div className="text-[10px] sm:text-xs uppercase font-bold tracking-wider text-slate-200">Primary Gulf Hub</div>
                         </div>
-                        <div className="bg-white/10 rounded-2xl p-4 border border-white/15 backdrop-blur-sm shadow-inner">
-                            <div className="text-3xl sm:text-4xl font-black text-cyan-300 mb-1">100%</div>
-                            <div className="text-xs uppercase font-bold tracking-wider text-slate-200">Legal Compliance</div>
+                        <div className="bg-white/10 rounded-xl sm:rounded-2xl p-2.5 sm:p-4 border border-white/15 backdrop-blur-sm shadow-inner">
+                            <div className="text-2xl sm:text-4xl font-black text-cyan-300 mb-0.5 sm:mb-1">100%</div>
+                            <div className="text-[10px] sm:text-xs uppercase font-bold tracking-wider text-slate-200">Legal Compliance</div>
                         </div>
-                        <div className="bg-white/10 rounded-2xl p-4 border border-white/15 backdrop-blur-sm shadow-inner">
-                            <div className="text-3xl sm:text-4xl font-black text-purple-300 mb-1">15+</div>
-                            <div className="text-xs uppercase font-bold tracking-wider text-slate-200">Industry Sectors</div>
+                        <div className="bg-white/10 rounded-xl sm:rounded-2xl p-2.5 sm:p-4 border border-white/15 backdrop-blur-sm shadow-inner">
+                            <div className="text-2xl sm:text-4xl font-black text-purple-300 mb-0.5 sm:mb-1">15+</div>
+                            <div className="text-[10px] sm:text-xs uppercase font-bold tracking-wider text-slate-200">Industry Sectors</div>
                         </div>
                     </div>
                 </div>
             </div>
 
             {/* Filter and Search Bar - High Contrast */}
-            <div className="bg-white rounded-2xl p-6 shadow-md border-2 border-slate-200 mb-8 space-y-5">
-                <div className="flex flex-col md:flex-row gap-4 items-center justify-between">
+            <div className="bg-white rounded-2xl p-4 sm:p-6 shadow-md border-2 border-slate-200 mb-8 space-y-4 sm:space-y-5">
+                <div className="flex flex-col md:flex-row gap-3 sm:gap-4 items-stretch md:items-center justify-between">
                     {/* Search */}
                     <div className="relative w-full md:w-96">
-                        <Search className="absolute left-4 top-1/2 -translate-y-1/2 text-slate-500" size={19} />
+                        <Search className="absolute left-3.5 top-1/2 -translate-y-1/2 text-slate-500" size={18} />
                         <input
                             type="text"
-                            placeholder="Search by company name or sector..."
+                            placeholder="Search by company or sector..."
                             value={searchQuery}
                             onChange={(e) => setSearchQuery(e.target.value)}
-                            className="w-full pl-11 pr-4 py-3 rounded-xl border-2 border-slate-300 text-sm font-semibold text-slate-900 placeholder:text-slate-400 focus:outline-none focus:ring-2 focus:ring-primary focus:border-primary transition-all bg-slate-50/50 focus:bg-white"
+                            className="w-full pl-10 pr-4 py-2.5 sm:py-3 rounded-xl border-2 border-slate-300 text-xs sm:text-sm font-semibold text-slate-900 placeholder:text-slate-400 focus:outline-none focus:ring-2 focus:ring-primary focus:border-primary transition-all bg-slate-50/50 focus:bg-white"
                         />
                         {searchQuery && (
                             <button
                                 onClick={() => setSearchQuery('')}
-                                className="absolute right-3.5 top-1/2 -translate-y-1/2 text-xs font-bold text-slate-500 hover:text-slate-800 bg-slate-200 px-2.5 py-1 rounded-md transition-colors"
+                                className="absolute right-3 top-1/2 -translate-y-1/2 text-xs font-bold text-slate-500 hover:text-slate-800 bg-slate-200 px-2 py-1 rounded-md transition-colors"
                             >
                                 Clear
                             </button>
@@ -101,41 +101,41 @@ const EmbassyClients = ({ title = "Our Valued Global Clients", subtitle = "Embas
                     </div>
 
                     {/* View Switcher and Count */}
-                    <div className="flex items-center gap-4 w-full md:w-auto justify-between md:justify-end">
-                        <span className="text-xs font-black text-slate-700 uppercase tracking-wider bg-slate-100 px-3 py-1.5 rounded-lg border border-slate-200">
-                            Showing {filteredClients.length} of {EMBASSY_CLIENTS.length} Companies
+                    <div className="flex items-center gap-3 w-full md:w-auto justify-between md:justify-end">
+                        <span className="text-[11px] sm:text-xs font-black text-slate-700 uppercase tracking-wider bg-slate-100 px-2.5 py-1.5 rounded-lg border border-slate-200">
+                            {filteredClients.length} of {EMBASSY_CLIENTS.length} Companies
                         </span>
 
                         <div className="inline-flex rounded-xl bg-slate-200/90 p-1 border-2 border-slate-300">
                             <button
                                 onClick={() => setViewMode('grid')}
-                                className={`flex items-center gap-1.5 px-3.5 py-1.5 rounded-lg text-xs font-extrabold transition-all ${
+                                className={`flex items-center gap-1.5 px-3 py-1 sm:px-3.5 sm:py-1.5 rounded-lg text-xs font-extrabold transition-all ${
                                     viewMode === 'grid' ? 'bg-primary text-white shadow-md' : 'text-slate-700 hover:text-primary'
                                 }`}
                             >
-                                <LayoutGrid size={15} />
+                                <LayoutGrid size={14} />
                                 <span>Grid</span>
                             </button>
                             <button
                                 onClick={() => setViewMode('table')}
-                                className={`flex items-center gap-1.5 px-3.5 py-1.5 rounded-lg text-xs font-extrabold transition-all ${
+                                className={`flex items-center gap-1.5 px-3 py-1 sm:px-3.5 sm:py-1.5 rounded-lg text-xs font-extrabold transition-all ${
                                     viewMode === 'table' ? 'bg-primary text-white shadow-md' : 'text-slate-700 hover:text-primary'
                                 }`}
                             >
-                                <Table size={15} />
+                                <Table size={14} />
                                 <span>Table</span>
                             </button>
                         </div>
                     </div>
                 </div>
 
-                {/* Category Pills - High Contrast */}
-                <div className="flex items-center gap-2.5 overflow-x-auto pb-2 scrollbar-none pt-1">
+                {/* Category Pills - Smooth Swipe on Mobile */}
+                <div className="flex items-center gap-2 overflow-x-auto pb-2 scrollbar-none pt-1 -mx-1 px-1">
                     {categories.map((cat) => (
                         <button
                             key={cat}
                             onClick={() => setSelectedSector(cat)}
-                            className={`px-4 py-2 rounded-xl text-xs font-extrabold whitespace-nowrap transition-all border-2 ${
+                            className={`px-3 sm:px-4 py-1.5 sm:py-2 rounded-xl text-xs font-extrabold whitespace-nowrap transition-all border-2 shrink-0 ${
                                 selectedSector === cat
                                     ? 'bg-primary text-white border-primary shadow-md scale-105'
                                     : 'bg-slate-100 text-slate-800 hover:bg-slate-200 border-slate-200'

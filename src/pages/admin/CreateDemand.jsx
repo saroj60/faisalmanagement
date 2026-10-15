@@ -64,30 +64,35 @@ const CreateDemand = () => {
     return (
         <Section>
             <div className="max-w-2xl mx-auto">
-                <div className="flex justify-between items-center mb-6">
-                    <Input label="Admin Dashboard" value="Create New Demand" readOnly className="font-bold text-xl border-none p-0 flex-1" />
-                    <div className="flex space-x-4">
+                <div className="flex flex-col sm:flex-row justify-between sm:items-center gap-4 mb-6">
+                    <div>
+                        <h1 className="text-xl sm:text-2xl font-black text-primary">Admin Dashboard</h1>
+                        <p className="text-xs sm:text-sm font-semibold text-gray-500">Create New Demand</p>
+                    </div>
+                    <div className="flex flex-wrap gap-2">
                         <Button 
                             variant="outline" 
+                            size="sm"
                             onClick={() => setIsPasswordModalOpen(true)}
-                            className="whitespace-nowrap"
+                            className="whitespace-nowrap flex-1 sm:flex-none text-xs sm:text-sm"
                         >
                             Change Password
                         </Button>
                         <Button 
                             variant="outline" 
+                            size="sm"
                             onClick={() => {
                                 logout();
                                 navigate('/admin/login');
                             }}
-                            className="whitespace-nowrap text-red-600 border-red-200 hover:bg-red-50"
+                            className="whitespace-nowrap text-red-600 border-red-200 hover:bg-red-50 flex-1 sm:flex-none text-xs sm:text-sm"
                         >
                             Logout
                         </Button>
                     </div>
                 </div>
 
-                <Card className="p-8 border border-gray-100 shadow-lg">
+                <Card className="p-5 sm:p-8 border border-gray-100 shadow-lg">
                     <form className="space-y-6" onSubmit={handleSubmit}>
                         <Input
                             label="Demand Name"

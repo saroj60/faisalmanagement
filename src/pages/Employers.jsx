@@ -34,21 +34,21 @@ const Employers = () => {
 
     return (
         <>
-            <div className="bg-primary text-white py-20">
+            <div className="bg-primary text-white py-12 sm:py-20">
                 <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-                    <h1 className="text-4xl md:text-5xl font-bold mb-6">Hire Top Talent</h1>
-                    <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+                    <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-3 sm:mb-6">Hire Top Talent</h1>
+                    <p className="text-base sm:text-xl text-gray-300 max-w-3xl mx-auto">
                         Partner with us to meet your manpower requirements efficiently.
                     </p>
                 </div>
             </div>
 
             <Section>
-                <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
+                <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12">
 
                     <div>
-                        <h2 className="text-3xl font-bold text-primary mb-6">Request Manpower</h2>
-                        <p className="text-gray-600 mb-8">
+                        <h2 className="text-2xl sm:text-3xl font-bold text-primary mb-3 sm:mb-6">Request Manpower</h2>
+                        <p className="text-gray-600 mb-6 sm:mb-8 text-sm sm:text-base">
                             Fill out the form below to let us know your requirements. Our team will get back to you within 24 hours.
                         </p>
 
@@ -112,8 +112,8 @@ const Employers = () => {
                     </div>
 
                     <div>
-                        <Card className="p-8 bg-gray-50 h-full">
-                            <h3 className="text-2xl font-bold text-primary mb-6">Our Recruitment Process</h3>
+                        <Card className="p-5 sm:p-8 bg-gray-50 h-full">
+                            <h3 className="text-xl sm:text-2xl font-bold text-primary mb-4 sm:mb-6">Our Recruitment Process</h3>
                             <div className="space-y-8">
                                 {[
                                     { title: 'Requirement Analysis', desc: 'We understand your needs and job specifications.' },

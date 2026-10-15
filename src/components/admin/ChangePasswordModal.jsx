@@ -70,8 +70,8 @@ const ChangePasswordModal = ({ isOpen, onClose }) => {
     };
 
     return (
-        <div className="fixed inset-0 z-50 flex items-center justify-center bg-black bg-opacity-50 px-4">
-            <Card className="w-full max-w-md relative p-6">
+        <div className="fixed inset-0 z-50 flex items-center justify-center bg-black bg-opacity-50 p-4">
+            <Card className="w-full max-w-md relative p-5 sm:p-6">
                 <button 
                     onClick={onClose} 
                     className="absolute top-4 right-4 text-gray-400 hover:text-gray-600 focus:outline-none"
@@ -80,7 +80,7 @@ const ChangePasswordModal = ({ isOpen, onClose }) => {
                     <X size={24} />
                 </button>
                 
-                <h2 className="text-2xl font-bold text-primary mb-6">Change Password</h2>
+                <h2 className="text-xl sm:text-2xl font-bold text-primary mb-4 sm:mb-6">Change Password</h2>
                 
                 <form onSubmit={handleSubmit} className="space-y-4">
                     <Input
@@ -111,11 +111,11 @@ const ChangePasswordModal = ({ isOpen, onClose }) => {
                     {error && <div className="text-red-500 text-sm mt-2">{error}</div>}
                     {success && <div className="text-green-500 text-sm mt-2">{success}</div>}
                     
-                    <div className="pt-4 flex justify-end space-x-3">
-                        <Button type="button" variant="outline" onClick={onClose} className="border-gray-300 text-gray-700 hover:bg-gray-50">
+                    <div className="pt-4 flex flex-col sm:flex-row justify-end gap-2 sm:space-x-3">
+                        <Button type="button" variant="outline" onClick={onClose} className="border-gray-300 text-gray-700 hover:bg-gray-50 order-2 sm:order-1">
                             Cancel
                         </Button>
-                        <Button type="submit" disabled={isLoading}>
+                        <Button type="submit" disabled={isLoading} className="order-1 sm:order-2">
                             {isLoading ? 'Updating...' : 'Change Password'}
                         </Button>
                     </div>

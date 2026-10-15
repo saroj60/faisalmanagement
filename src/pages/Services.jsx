@@ -47,7 +47,7 @@ const Services = () => {
                 canonicalPath="/services"
             />
             <div className="bg-gray-50 min-h-screen">
-            <div className="relative bg-gray-50 py-24 overflow-hidden">
+            <div className="relative bg-gray-50 py-12 sm:py-20 overflow-hidden">
                 <div className="absolute inset-0 z-0">
                     <img
                         src={corporateImg}
@@ -56,15 +56,15 @@ const Services = () => {
                     />
                 </div>
                 <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-                    <h1 className="text-4xl md:text-5xl font-bold mb-6 text-primary">Our Services</h1>
-                    <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+                    <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-3 sm:mb-6 text-primary">Our Services</h1>
+                    <p className="text-base sm:text-xl text-gray-600 max-w-3xl mx-auto">
                         Delivering excellence in recruitment and manpower solutions across diverse sectors.
                     </p>
                 </div>
             </div>
 
             <Section>
-                <div className="flex flex-wrap justify-center gap-8">
+                <div className="flex flex-wrap justify-center gap-6 sm:gap-8">
                     {servicesList.map((service, index) => (
                         <motion.div
                             key={index}
@@ -72,7 +72,7 @@ const Services = () => {
                             whileInView={{ opacity: 1, y: 0 }}
                             transition={{ duration: 0.5, delay: index * 0.1 }}
                             viewport={{ once: true }}
-                            className="relative group overflow-hidden rounded-[2rem] h-[400px] w-full md:w-[calc(50%-1rem)] lg:w-[calc(33.333%-2rem)] flex-shrink-0 shadow-lg cursor-pointer"
+                            className="relative group overflow-hidden rounded-2xl sm:rounded-[2rem] h-[320px] sm:h-[400px] w-full md:w-[calc(50%-1rem)] lg:w-[calc(33.333%-2rem)] flex-shrink-0 shadow-lg cursor-pointer"
                         >
                             {/* Background Image */}
                             <div
@@ -87,9 +87,9 @@ const Services = () => {
                             <div className="absolute inset-0 bg-gradient-to-t from-black via-black/80 to-transparent opacity-90 transition-opacity duration-300" />
 
                             {/* Content */}
-                            <div className="absolute inset-0 flex flex-col justify-end p-8 text-center">
-                                <h3 className="text-2xl font-bold text-white mb-4 drop-shadow-md">{service.title}</h3>
-                                <p className="text-gray-200 text-sm leading-relaxed max-w-sm mx-auto font-medium drop-shadow-sm">
+                            <div className="absolute inset-0 flex flex-col justify-end p-5 sm:p-8 text-center">
+                                <h3 className="text-xl sm:text-2xl font-bold text-white mb-2 sm:mb-4 drop-shadow-md">{service.title}</h3>
+                                <p className="text-gray-200 text-xs sm:text-sm leading-relaxed max-w-sm mx-auto font-medium drop-shadow-sm">
                                     {service.desc}
                                 </p>
                             </div>

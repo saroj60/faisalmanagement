@@ -75,10 +75,10 @@ const Demands = () => {
                 keywords="Overseas Job Demands Nepal, Gulf Job Vacancies Kathmandu, Kuwait Jobs for Nepalese, Manpower Demand Letters Nepal"
                 canonicalPath="/demands"
             />
-            <div className="bg-primary text-white py-20">
+            <div className="bg-primary text-white py-12 sm:py-20">
                 <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-                    <h1 className="text-4xl md:text-5xl font-bold mb-6">Current Demands</h1>
-                    <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+                    <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-3 sm:mb-6">Current Demands</h1>
+                    <p className="text-base sm:text-xl text-gray-300 max-w-3xl mx-auto">
                         Explore opportunities across the globe.
                     </p>
                 </div>
@@ -99,11 +99,11 @@ const Demands = () => {
                             <p className="text-gray-500 mt-2">Please check back later.</p>
                         </div>
                     ) : (
-                        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
                             {demands.map((demand) => (
-                                <Card key={demand.id} className="p-6 border border-gray-100 shadow-md hover:shadow-lg transition-shadow flex flex-col h-full">
+                                <Card key={demand.id} className="p-5 sm:p-6 border border-gray-100 shadow-md hover:shadow-lg transition-shadow flex flex-col h-full">
                                     <div className="mb-4">
-                                        <h3 className="text-xl font-bold text-primary mb-2 line-clamp-2">{demand.title}</h3>
+                                        <h3 className="text-lg sm:text-xl font-bold text-primary mb-2 line-clamp-2">{demand.title}</h3>
                                         <div className="flex items-center text-gray-500 mb-2">
                                             <MapPin size={16} className="mr-2" /> {demand.country}
                                         </div>

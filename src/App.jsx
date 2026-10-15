@@ -5,6 +5,7 @@ import Layout from './components/layout/Layout';
 import Home from './pages/Home';
 import About from './pages/About';
 import Services from './pages/Services';
+import KuwaitManpower from './pages/KuwaitManpower';
 import Portfolio from './pages/Portfolio';
 import Demands from './pages/Demands';
 import DemandDetails from './pages/DemandDetails';
@@ -32,6 +33,8 @@ function App() {
               <Route path="/" element={<Home />} />
               <Route path="/about" element={<About />} />
               <Route path="/services" element={<Services />} />
+              <Route path="/kuwait-manpower-supply" element={<KuwaitManpower />} />
+              <Route path="/employers" element={<KuwaitManpower />} />
 
               {/* Public Demand Routes */}
               <Route path="/demands" element={<Demands />} />

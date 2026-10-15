@@ -24,9 +24,9 @@ const reasons = [
 const WhyChooseUs = () => {
     return (
         <Section id="why-choose-us">
-            <div className="flex flex-col md:flex-row items-center gap-12">
-                <div className="md:w-1/2">
-                    <div className="bg-gray-200 rounded-lg overflow-hidden h-[400px] relative">
+            <div className="flex flex-col md:flex-row items-center gap-8 md:gap-12">
+                <div className="w-full md:w-1/2">
+                    <div className="bg-gray-200 rounded-xl overflow-hidden h-[260px] sm:h-[380px] md:h-[400px] relative shadow-md">
                         <div className="absolute inset-0 bg-primary/20"></div>
                         <img
                             src={whyChooseUsImg}
@@ -36,9 +36,9 @@ const WhyChooseUs = () => {
                     </div>
                 </div>
 
-                <div className="md:w-1/2">
-                    <h2 className="text-3xl md:text-4xl font-bold text-primary mb-6">Why Choose Faisal Management?</h2>
-                    <p className="text-gray-600 mb-8 leading-relaxed">
+                <div className="w-full md:w-1/2">
+                    <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-primary mb-4 sm:mb-6">Why Choose Faisal Management?</h2>
+                    <p className="text-gray-600 mb-6 sm:mb-8 leading-relaxed text-sm sm:text-base">
                         We understand that workforce quality determines business success. Our comprehensive recruitment process ensures you get dedicated, skilled, and reliable professionals tailored to your specific project needs.
                     </p>
 

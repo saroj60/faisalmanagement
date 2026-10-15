@@ -5,9 +5,9 @@ import { Facebook, Twitter, Linkedin, Instagram, Mail, Phone, MapPin } from 'luc
 
 const Footer = () => {
     return (
-        <footer className="bg-[#000000] text-white pt-16 pb-8" style={{ backgroundColor: '#000000' }}>
+        <footer className="bg-[#000000] text-white pt-10 sm:pt-16 pb-8" style={{ backgroundColor: '#000000' }}>
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-12">
+                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-8 mb-8 sm:mb-12">
 
                     {/* Company Info */}
                     <div>
@@ -42,14 +42,15 @@ const Footer = () => {
                         </ul>
                     </div>
 
-                    {/* Services (Static List for now) */}
+                    {/* Services */}
                     <div>
                         <h4 className="text-lg font-semibold mb-4 text-accent">Our Services</h4>
                         <ul className="space-y-2 text-sm text-white">
-                            <li><Link to="/services" className="hover:text-white">Skilled Manpower</Link></li>
-                            <li><Link to="/services" className="hover:text-white">Overseas Recruitment</Link></li>
-                            <li><Link to="/services" className="hover:text-white">HR Solutions</Link></li>
-                            <li><Link to="/services" className="hover:text-white">Contract Staffing</Link></li>
+                            <li><Link to="/kuwait-manpower-supply" className="hover:text-accent font-semibold text-amber-300">Kuwait Manpower Supply 🇰🇼</Link></li>
+                            <li><Link to="/services" className="hover:text-white">Skilled & Professional Manpower</Link></li>
+                            <li><Link to="/services" className="hover:text-white">Overseas Recruitment Nepal</Link></li>
+                            <li><Link to="/services" className="hover:text-white">Trade Testing & Screening</Link></li>
+                            <li><Link to="/kuwait-manpower-supply#demand-form" className="hover:text-white">Hire From Nepal (Employer)</Link></li>
                         </ul>
                     </div>
 
@@ -67,12 +68,14 @@ const Footer = () => {
                                     {COMPANY_INFO.kuwaitOffice.phone}
                                 </a>
                             </li>
-                            <li className="flex items-center">
-                                <Mail size={18} className="mr-3 text-accent flex-shrink-0" />
-                                <a href={`mailto:${COMPANY_INFO.kuwaitOffice.email}`} className="hover:text-accent transition-colors">
-                                    {COMPANY_INFO.kuwaitOffice.email}
-                                </a>
-                            </li>
+                            {COMPANY_INFO.kuwaitOffice.email && (
+                                <li className="flex items-center">
+                                    <Mail size={18} className="mr-3 text-accent flex-shrink-0" />
+                                    <a href={`mailto:${COMPANY_INFO.kuwaitOffice.email}`} className="hover:text-accent transition-colors">
+                                        {COMPANY_INFO.kuwaitOffice.email}
+                                    </a>
+                                </li>
+                            )}
                         </ul>
 
                         <h4 className="text-lg font-semibold mb-3 text-accent">Nepal Head Office 🇳🇵</h4>

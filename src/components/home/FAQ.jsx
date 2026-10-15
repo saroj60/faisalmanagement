@@ -10,7 +10,7 @@ export const FAQ_DATA = [
     },
     {
         question: "Where is Faisal Management's Kuwait office located?",
-        answer: `Our Kuwait International Office is located at Jleeb Al Shyoukh - Al Sour - Complex Road - 50, Floor - 2, Kuwait. We operate under Commercial Registration (C.R.) No. 2020/19741, directed by Managing Director Mr. Sherpa (Phone: +965 95554055, Email: sherpa@faisalmanagement.com.np).`
+        answer: `Our Kuwait International Office is located at Jleeb Al Shyoukh - Al Sour - Complex Road - 50, Floor - 2, Kuwait. We operate under Commercial Registration (C.R.) No. 2020/19741 (Phone: ${COMPANY_INFO.kuwaitOffice.phone}).`
     },
     {
         question: "Which countries does Faisal Management supply workers to?",
@@ -26,7 +26,7 @@ export const FAQ_DATA = [
     },
     {
         question: "How can international employers submit job demands or request manpower?",
-        answer: "Overseas employers can directly submit demand letters through our online portal, email us at info@faisalnepal.com.np, or contact our Kathmandu Head Office (+977-14592271) or Kuwait Office (+965 95554055). We provide full legal liaison and swift mobilization."
+        answer: `Overseas employers can directly submit demand letters through our online portal, email us at ${COMPANY_INFO.email}, or contact our Kathmandu Head Office (+977-14592271) or Kuwait Office (${COMPANY_INFO.kuwaitOffice.phone}). We provide full legal liaison and swift mobilization.`
     }
 ];
 
@@ -38,17 +38,17 @@ const FAQ = () => {
     };
 
     return (
-        <Section className="py-20 bg-gray-50/70">
+        <Section className="py-10 sm:py-16 md:py-20 bg-gray-50/70">
             <div className="max-w-4xl mx-auto">
-                <div className="text-center mb-14">
-                    <div className="inline-flex items-center gap-2 bg-blue-100 text-primary px-4 py-1.5 rounded-full text-xs font-bold uppercase tracking-wider mb-3">
+                <div className="text-center mb-8 sm:mb-14">
+                    <div className="inline-flex items-center gap-2 bg-blue-100 text-primary px-3.5 py-1.5 rounded-full text-xs font-bold uppercase tracking-wider mb-3">
                         <HelpCircle size={15} />
                         <span>Frequently Asked Questions</span>
                     </div>
-                    <h2 className="text-3xl md:text-4xl font-extrabold text-primary tracking-tight mb-4">
+                    <h2 className="text-2xl sm:text-3xl md:text-4xl font-extrabold text-primary tracking-tight mb-3 sm:mb-4">
                         Got Questions? We Have Answers.
                     </h2>
-                    <p className="text-gray-600 text-base md:text-lg max-w-2xl mx-auto">
+                    <p className="text-gray-600 text-sm sm:text-base md:text-lg max-w-2xl mx-auto font-medium">
                         Everything you need to know about our legal licensing, Kuwait operations, recruitment process, and workforce deployment.
                     </p>
                 </div>
@@ -67,23 +67,23 @@ const FAQ = () => {
                             >
                                 <button
                                     onClick={() => toggleAccordion(index)}
-                                    className="w-full py-5 px-6 text-left flex justify-between items-center gap-4 focus:outline-none"
+                                    className="w-full py-4 px-4 sm:py-5 sm:px-6 text-left flex justify-between items-center gap-3 sm:gap-4 focus:outline-none"
                                     aria-expanded={isOpen}
                                 >
-                                    <span className={`font-bold text-base md:text-lg transition-colors ${
+                                    <span className={`font-bold text-sm sm:text-base md:text-lg transition-colors leading-snug ${
                                         isOpen ? 'text-primary' : 'text-gray-900'
                                     }`}>
                                         {item.question}
                                     </span>
-                                    <span className={`w-8 h-8 rounded-full flex items-center justify-center shrink-0 transition-transform duration-300 ${
+                                    <span className={`w-7 h-7 sm:w-8 sm:h-8 rounded-full flex items-center justify-center shrink-0 transition-transform duration-300 ${
                                         isOpen ? 'bg-primary text-white rotate-180' : 'bg-gray-100 text-gray-500'
                                     }`}>
-                                        <ChevronDown size={18} />
+                                        <ChevronDown size={16} className="sm:w-[18px] sm:h-[18px]" />
                                     </span>
                                 </button>
 
                                 {isOpen && (
-                                    <div className="px-6 pb-6 pt-1 text-gray-600 leading-relaxed text-sm md:text-base border-t border-gray-100 mt-1">
+                                    <div className="px-4 pb-4 sm:px-6 sm:pb-6 pt-1 text-gray-600 leading-relaxed text-xs sm:text-sm md:text-base border-t border-gray-100 mt-1">
                                         <p>{item.answer}</p>
                                     </div>
                                 )}

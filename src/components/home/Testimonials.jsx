@@ -34,24 +34,26 @@ const testimonials = [
 const Testimonials = () => {
     return (
         <Section bg="gray" id="testimonials">
-            <div className="text-center mb-16">
-                <h2 className="text-3xl md:text-4xl font-bold text-primary mb-4">What Our Clients Say</h2>
-                <p className="text-gray-600"> Trusted by leading companies across industries.</p>
+            <div className="text-center mb-10 sm:mb-16">
+                <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-primary mb-3 sm:mb-4">What Our Clients Say</h2>
+                <p className="text-gray-600 text-sm sm:text-base">Trusted by leading companies across industries.</p>
             </div>
 
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-6 sm:gap-8">
                 {testimonials.map((t, index) => (
-                    <Card key={index} className="p-8">
-                        <div className="flex mb-4">
-                            {[...Array(5)].map((_, i) => (
-                                <Star key={i} size={16} className={`${i < t.rating ? 'text-accent fill-accent' : 'text-gray-300'}`} />
-                            ))}
+                    <Card key={index} className="p-5 sm:p-8 flex flex-col justify-between">
+                        <div>
+                            <div className="flex mb-4">
+                                {[...Array(5)].map((_, i) => (
+                                    <Star key={i} size={16} className={`${i < t.rating ? 'text-accent fill-accent' : 'text-gray-300'}`} />
+                                ))}
+                            </div>
+                            <p className="text-gray-600 italic mb-6 text-sm sm:text-base">"{t.quote}"</p>
                         </div>
-                        <p className="text-gray-600 italic mb-6">"{t.quote}"</p>
-                        <div className="mt-auto flex items-center">
-                            <img src={t.image} alt={t.name} className="w-12 h-12 rounded-full object-cover mr-4" />
+                        <div className="mt-auto flex items-center pt-4 border-t border-gray-100">
+                            <img src={t.image} alt={t.name} className="w-11 h-11 sm:w-12 sm:h-12 rounded-full object-cover mr-3 sm:mr-4 shrink-0" />
                             <div>
-                                <p className="font-bold text-primary">{t.name}</p>
+                                <p className="font-bold text-primary text-sm sm:text-base">{t.name}</p>
                                 <p className="text-xs text-gray-500">{t.role}</p>
                             </div>
                         </div>

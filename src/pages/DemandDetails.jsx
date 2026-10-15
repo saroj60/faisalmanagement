@@ -73,36 +73,36 @@ const DemandDetails = () => {
                     <ChevronLeft size={20} className="mr-1" /> Back to Demands
                 </Link>
 
-                <Card className="p-8 border border-gray-100 shadow-lg">
-                    <h1 className="text-3xl font-bold text-primary mb-4">{demand.title}</h1>
+                <Card className="p-5 sm:p-8 border border-gray-100 shadow-lg">
+                    <h1 className="text-2xl sm:text-3xl font-bold text-primary mb-4 leading-snug">{demand.title}</h1>
 
-                    <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-8">
-                        <div className="space-y-4">
-                            <div className="flex items-center text-lg">
-                                <MapPin size={24} className="mr-3 text-red-500" />
+                    <div className="grid grid-cols-1 md:grid-cols-2 gap-4 sm:gap-8 mb-6 sm:mb-8">
+                        <div className="space-y-3 sm:space-y-4">
+                            <div className="flex items-center text-sm sm:text-base md:text-lg">
+                                <MapPin size={20} className="mr-3 text-red-500 shrink-0" />
                                 <span className="text-gray-600">Location:</span>
                                 <span className="ml-2 font-semibold">{demand.country}</span>
                             </div>
-                            <div className="flex items-center text-lg">
-                                <DollarSign size={24} className="mr-3 text-green-500" />
+                            <div className="flex items-center text-sm sm:text-base md:text-lg">
+                                <DollarSign size={20} className="mr-3 text-green-500 shrink-0" />
                                 <span className="text-gray-600">Salary:</span>
                                 <span className="ml-2 font-semibold">{demand.salary}</span>
                             </div>
-                            <div className="flex items-center text-lg">
-                                <Users size={24} className="mr-3 text-blue-500" />
+                            <div className="flex items-center text-sm sm:text-base md:text-lg">
+                                <Users size={20} className="mr-3 text-blue-500 shrink-0" />
                                 <span className="text-gray-600">Workers Needed:</span>
                                 <span className="ml-2 font-semibold">{demand.workers}</span>
                             </div>
                         </div>
 
-                        <div className="space-y-4">
-                            <div className="flex items-center text-lg">
-                                <Calendar size={24} className="mr-3 text-orange-500" />
+                        <div className="space-y-3 sm:space-y-4">
+                            <div className="flex items-center text-sm sm:text-base md:text-lg">
+                                <Calendar size={20} className="mr-3 text-orange-500 shrink-0" />
                                 <span className="text-gray-600">Start Date:</span>
                                 <span className="ml-2 font-semibold">{demand.startDate}</span>
                             </div>
-                            <div className="flex items-center text-lg">
-                                <Calendar size={24} className="mr-3 text-orange-500" />
+                            <div className="flex items-center text-sm sm:text-base md:text-lg">
+                                <Calendar size={20} className="mr-3 text-orange-500 shrink-0" />
                                 <span className="text-gray-600">End Date:</span>
                                 <span className="ml-2 font-semibold">{demand.endDate}</span>
                             </div>
@@ -111,7 +111,7 @@ const DemandDetails = () => {
 
                     <div className="border-t pt-6">
                         <Link to="/contact">
-                            <Button size="lg" className="w-full md:w-auto">
+                            <Button size="lg" className="w-full sm:w-auto">
                                 Apply Now <ArrowRight size={20} className="ml-2" />
                             </Button>
                         </Link>

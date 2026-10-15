@@ -25,24 +25,24 @@ const Hero = () => {
                             initial={{ opacity: 0, y: 10 }}
                             animate={{ opacity: 1, y: 0 }}
                             transition={{ duration: 0.6, delay: 0.1 }}
-                            className="inline-block bg-primary/10 text-primary px-3 py-1 rounded-full text-sm font-semibold mb-4"
+                            className="inline-block bg-primary/10 text-primary px-3 py-1 rounded-full text-xs sm:text-sm font-semibold mb-3 sm:mb-4"
                         >
                             Formerly {COMPANY_INFO.formerName}
                         </motion.span>
-                        <h1 className="text-4xl md:text-6xl font-bold text-primary mb-4 leading-tight">
+                        <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-primary mb-3 sm:mb-4 leading-tight break-words">
                             Build Your <span className="text-accent">Dream Career</span> Abroad With Us
                         </h1>
-                        <h2 className="text-2xl md:text-3xl font-semibold text-gray-800 mb-6">
+                        <h2 className="text-xl sm:text-2xl md:text-3xl font-semibold text-gray-800 mb-4 sm:mb-6">
                             Legitimate Foreign Employment Opportunities
                         </h2>
-                        <p className="text-lg md:text-xl text-gray-700 mb-8 max-w-xl">
+                        <p className="text-base sm:text-lg md:text-xl text-gray-700 mb-6 sm:mb-8 max-w-xl leading-relaxed">
                             Secure your future with trusted jobs in the Gulf, Malaysia, Europe, and beyond. We connect skilled and unskilled workers with top international employers.
                         </p>
-                        <div className="flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-4">
-                            <Link to="/demands">
+                        <div className="flex flex-col sm:flex-row space-y-3 sm:space-y-0 sm:space-x-4 w-full sm:w-auto">
+                            <Link to="/demands" className="w-full sm:w-auto">
                                 <Button size="lg" className="w-full sm:w-auto">View Demand</Button>
                             </Link>
-                            <Link to="/portfolio">
+                            <Link to="/portfolio" className="w-full sm:w-auto">
                                 <Button size="lg" variant="outline" className="w-full sm:w-auto text-primary border-primary hover:bg-primary hover:text-white">
                                     View Portfolio
                                 </Button>
