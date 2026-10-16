@@ -26,7 +26,7 @@ export const FAQ_DATA = [
     },
     {
         question: "How can international employers submit job demands or request manpower?",
-        answer: `Overseas employers can directly submit demand letters through our online portal, email us at ${COMPANY_INFO.email}, or contact our Kathmandu Head Office (+977-14592271) or Kuwait Office (${COMPANY_INFO.kuwaitOffice.phone}). We provide full legal liaison and swift mobilization.`
+        answer: `Overseas employers can directly submit demand letters through our online portal, email us at ${COMPANY_INFO.email}, or contact our Kathmandu Head Office (${COMPANY_INFO.phone}) or Kuwait Office (${COMPANY_INFO.kuwaitOffice.phone}). We provide full legal liaison and swift mobilization.`
     }
 ];
 

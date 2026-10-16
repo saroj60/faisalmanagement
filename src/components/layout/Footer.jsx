@@ -86,7 +86,9 @@ const Footer = () => {
                             </li>
                             <li className="flex items-center">
                                 <Phone size={18} className="mr-3 text-accent flex-shrink-0" />
-                                <span>{COMPANY_INFO.phone}</span>
+                                <a href={`tel:${COMPANY_INFO.phone.replace(/[^0-9+]/g, '')}`} className="hover:text-accent transition-colors">
+                                    {COMPANY_INFO.phone}
+                                </a>
                             </li>
                             <li className="flex items-center">
                                 <Mail size={18} className="mr-3 text-accent flex-shrink-0" />

@@ -14,7 +14,7 @@ export const COMPANY_INFO = {
     formerName: 'Sony International Pvt. Ltd.',
     tagline: 'Facilitate For Quality Support',
     email: 'info@faisalmanagement.com.np',
-    phone: '+977-14592271, 4592272',
+    phone: '+977 9705111337',
     address: 'Pinglasthan-9, Bajreshwori Marg, Kathmandu, Nepal',
 
     // Kuwait Office Information

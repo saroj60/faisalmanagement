@@ -111,7 +111,7 @@ const Contact = () => {
                                     <div className="space-y-1 text-xs text-gray-600">
                                         <p className="flex items-center">
                                             <Phone size={13} className="text-accent mr-2 shrink-0" />
-                                            <a href="tel:+97714592271" className="hover:underline">{COMPANY_INFO.phone}</a>
+                                            <a href={`tel:${COMPANY_INFO.phone.replace(/[^0-9+]/g, '')}`} className="hover:underline">{COMPANY_INFO.phone}</a>
                                         </p>
                                         <p className="flex items-center">
                                             <Mail size={13} className="text-accent mr-2 shrink-0" />

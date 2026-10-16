@@ -1,6 +1,6 @@
 import React from 'react';
 import Section from '../components/ui/Section';
-import { Target, Eye, Heart, Phone, Mail, MapPin } from 'lucide-react';
+import { Target, Eye, Heart, Phone, Mail } from 'lucide-react';
 import Card from '../components/ui/Card';
 import { COMPANY_INFO } from '../utils/constants';
 import headerBg from '../assets/about-header.png';
@@ -11,6 +11,7 @@ import partnerPhoto from '../assets/partner NB.png';
 import registrationImg from '../assets/registration.png';
 import marketingManagerPhoto from '../assets/marketing manager.jpeg';
 import chhabilalPhoto from '../assets/chhabilal.jpg';
+import poonamPhoto from '../assets/poonam_thakur.png';
 import lisencePhoto from '../assets/lisence.jpeg';
 import EmbassyClients from '../components/common/EmbassyClients';
 import SEO from '../components/common/SEO';
@@ -146,17 +147,67 @@ const About = () => {
                                         <Phone size={14} />
                                         <span>+965 98034552</span>
                                     </a>
-                                    <div className="inline-flex items-center gap-1.5 bg-emerald-50 text-emerald-800 px-3.5 py-1.5 rounded-full font-semibold text-[11px] sm:text-xs">
-                                        <MapPin size={14} className="text-emerald-600 shrink-0" />
-                                        <span>Kuwait Office: Jleeb Al Shyoukh, Al Sour (C.R. 2020/19741)</span>
-                                    </div>
                                 </div>
                             </div>
                         </div>
                     </div>
 
-                    {/* Business Partner - Prem Chhetri - MIDDLE */}
+                    {/* International Marketing Director - Mr. Chhabilal */}
                     <div className="bg-white rounded-2xl p-5 sm:p-8 md:p-12 mb-8 sm:mb-12 shadow-sm border border-gray-100 mt-8 sm:mt-12">
+                        <div className="flex flex-col md:flex-row gap-6 sm:gap-10 items-start">
+                            <div className="w-full md:w-2/5 flex justify-center">
+                                <div className="relative mx-auto w-full max-w-[280px] sm:max-w-xs md:max-w-none h-auto rounded-xl overflow-hidden shadow-lg border border-gray-100">
+                                    <img
+                                        src={chhabilalPhoto}
+                                        alt="International Marketing Director"
+                                        className="w-full h-auto object-cover"
+                                        onError={(e) => {
+                                            e.target.src = 'https://images.unsplash.com/photo-1560250097-0b93528c311a?q=80&w=1974&auto=format&fit=crop';
+                                        }}
+                                    />
+                                </div>
+                            </div>
+                            <div className="w-full md:w-3/5 text-center md:text-left">
+                                <h2 className="text-2xl sm:text-3xl font-bold text-primary mb-2">International Marketing Director</h2>
+                                <h3 className="text-lg sm:text-xl font-semibold text-gray-700 mb-4 sm:mb-6">Mr. Chhabilal</h3>
+
+                                <div className="space-y-4 text-gray-600 mb-6 text-base sm:text-lg leading-relaxed">
+                                    <p>Mr. Chhabilal serves as the International Marketing Director at Faisal Management Services. With extensive expertise in cross-border recruitment and international market dynamics, he spearheads our global outreach, institutional partnerships, and employer relations across key international markets.</p>
+                                    <p>Dedicated to delivering excellence and expanding overseas employment opportunities, he works closely with global corporate clients to align top-tier Nepali talent with international business requirements while ensuring integrity, ethics, and mutual growth.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    {/* Senior HR - Poonam Thakur */}
+                    <div className="bg-white rounded-2xl p-5 sm:p-8 md:p-12 mb-8 sm:mb-12 shadow-sm border border-gray-100 mt-8">
+                        <div className="flex flex-col md:flex-row-reverse gap-6 sm:gap-10 items-start">
+                            <div className="w-full md:w-2/5 flex justify-center">
+                                <div className="relative mx-auto w-full max-w-[280px] sm:max-w-xs md:max-w-none h-auto rounded-xl overflow-hidden shadow-lg border border-gray-100">
+                                    <img
+                                        src={poonamPhoto}
+                                        alt="Senior HR"
+                                        className="w-full h-auto object-cover"
+                                        onError={(e) => {
+                                            e.target.src = 'https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?q=80&w=1976&auto=format&fit=crop';
+                                        }}
+                                    />
+                                </div>
+                            </div>
+                            <div className="w-full md:w-3/5 text-center md:text-left">
+                                <h2 className="text-2xl sm:text-3xl font-bold text-primary mb-2">Senior HR</h2>
+                                <h3 className="text-lg sm:text-xl font-semibold text-gray-700 mb-4 sm:mb-6">Poonam Thakur</h3>
+
+                                <div className="space-y-4 text-gray-600 mb-6 text-base sm:text-lg leading-relaxed">
+                                    <p>Poonam Thakur serves as Senior HR at Faisal Management Services, bringing valuable expertise in human resource management, candidate evaluation, and workforce mobilization operations.</p>
+                                    <p>She plays a pivotal role in talent acquisition, screening, and documentation, ensuring that every candidate is thoroughly vetted and aligned with client specifications. Her dedication to professionalism, candidate welfare, and seamless coordination bridges the gap between aspiring Nepali workers and top employers abroad.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    {/* Business Partner - Prem Chhetri */}
+                    <div className="bg-white rounded-2xl p-5 sm:p-8 md:p-12 mb-8 sm:mb-12 shadow-sm border border-gray-100 mt-8">
                         <div className="flex flex-col md:flex-row gap-6 sm:gap-10 items-start">
                             <div className="w-full md:w-2/5 flex justify-center">
                                 <div className="relative mx-auto w-full max-w-[280px] sm:max-w-xs md:max-w-none h-auto rounded-xl overflow-hidden shadow-lg border border-gray-100">
@@ -210,7 +261,7 @@ const About = () => {
                     </div>
 
                     {/* Marketing Manager - Abhishekh Singh Rajput */}
-                    <div className="bg-white rounded-2xl p-5 sm:p-8 md:p-12 mb-8 sm:mb-12 shadow-sm border border-gray-100 mt-8">
+                    <div className="bg-white rounded-2xl p-5 sm:p-8 md:p-12 mb-10 sm:mb-16 shadow-sm border border-gray-100 mt-8">
                         <div className="flex flex-col md:flex-row gap-6 sm:gap-10 items-start">
                             <div className="w-full md:w-2/5 flex justify-center">
                                 <div className="relative mx-auto w-full max-w-[280px] sm:max-w-xs md:max-w-none h-auto rounded-xl overflow-hidden shadow-lg border border-gray-100">
@@ -230,33 +281,6 @@ const About = () => {
 
                                 <div className="space-y-4 text-gray-600 mb-6 text-base sm:text-lg leading-relaxed">
                                     <p>Abhishekh Singh Rajput is a dynamic and results-driven Marketing Manager at Faisal Management Services. With a deep understanding of market trends and a passion for building strategic partnerships, he leads our marketing initiatives to expand our global reach and connect talented professionals with world-class opportunities. His commitment to excellence and innovation ensures that our brand remains a trusted leader in the recruitment industry.</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    {/* International Marketing Director - Mr. Chhabilal */}
-                    <div className="bg-white rounded-2xl p-5 sm:p-8 md:p-12 mb-10 sm:mb-16 shadow-sm border border-gray-100 mt-8">
-                        <div className="flex flex-col md:flex-row-reverse gap-6 sm:gap-10 items-start">
-                            <div className="w-full md:w-2/5 flex justify-center">
-                                <div className="relative mx-auto w-full max-w-[280px] sm:max-w-xs md:max-w-none h-auto rounded-xl overflow-hidden shadow-lg border border-gray-100">
-                                    <img
-                                        src={chhabilalPhoto}
-                                        alt="International Marketing Director"
-                                        className="w-full h-auto object-cover"
-                                        onError={(e) => {
-                                            e.target.src = 'https://images.unsplash.com/photo-1560250097-0b93528c311a?q=80&w=1974&auto=format&fit=crop';
-                                        }}
-                                    />
-                                </div>
-                            </div>
-                            <div className="w-full md:w-3/5 text-center md:text-left">
-                                <h2 className="text-2xl sm:text-3xl font-bold text-primary mb-2">International Marketing Director</h2>
-                                <h3 className="text-lg sm:text-xl font-semibold text-gray-700 mb-4 sm:mb-6">Mr. Chhabilal</h3>
-
-                                <div className="space-y-4 text-gray-600 mb-6 text-base sm:text-lg leading-relaxed">
-                                    <p>Mr. Chhabilal serves as the International Marketing Director at Faisal Management Services. With extensive expertise in cross-border recruitment and international market dynamics, he spearheads our global outreach, institutional partnerships, and employer relations across key international markets.</p>
-                                    <p>Dedicated to delivering excellence and expanding overseas employment opportunities, he works closely with global corporate clients to align top-tier Nepali talent with international business requirements while ensuring integrity, ethics, and mutual growth.</p>
                                 </div>
                             </div>
                         </div>

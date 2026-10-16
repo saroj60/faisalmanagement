@@ -188,7 +188,7 @@ const KuwaitManpower = () => {
                     },
                     {
                         "@type": "ContactPoint",
-                        "telephone": "+977-14592271",
+                        "telephone": "+977 9705111337",
                         "contactType": "head office",
                         "areaServed": "NP",
                         "availableLanguage": ["English", "Nepali"]
