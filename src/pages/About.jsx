@@ -179,14 +179,14 @@ const About = () => {
                         </div>
                     </div>
 
-                    {/* Senior HR - Poonam Thakur */}
+                    {/* Marketing Officer - Poonam Thakur */}
                     <div className="bg-white rounded-2xl p-5 sm:p-8 md:p-12 mb-8 sm:mb-12 shadow-sm border border-gray-100 mt-8">
                         <div className="flex flex-col md:flex-row-reverse gap-6 sm:gap-10 items-start">
                             <div className="w-full md:w-2/5 flex justify-center">
                                 <div className="relative mx-auto w-full max-w-[280px] sm:max-w-xs md:max-w-none h-auto rounded-xl overflow-hidden shadow-lg border border-gray-100">
                                     <img
                                         src={poonamPhoto}
-                                        alt="Senior HR"
+                                        alt="Marketing Officer"
                                         className="w-full h-auto object-cover"
                                         onError={(e) => {
                                             e.target.src = 'https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?q=80&w=1976&auto=format&fit=crop';
@@ -195,12 +195,12 @@ const About = () => {
                                 </div>
                             </div>
                             <div className="w-full md:w-3/5 text-center md:text-left">
-                                <h2 className="text-2xl sm:text-3xl font-bold text-primary mb-2">Senior HR</h2>
+                                <h2 className="text-2xl sm:text-3xl font-bold text-primary mb-2">Marketing Officer</h2>
                                 <h3 className="text-lg sm:text-xl font-semibold text-gray-700 mb-4 sm:mb-6">Poonam Thakur</h3>
 
                                 <div className="space-y-4 text-gray-600 mb-6 text-base sm:text-lg leading-relaxed">
-                                    <p>Poonam Thakur serves as Senior HR at Faisal Management Services, bringing valuable expertise in human resource management, candidate evaluation, and workforce mobilization operations.</p>
-                                    <p>She plays a pivotal role in talent acquisition, screening, and documentation, ensuring that every candidate is thoroughly vetted and aligned with client specifications. Her dedication to professionalism, candidate welfare, and seamless coordination bridges the gap between aspiring Nepali workers and top employers abroad.</p>
+                                    <p>Poonam Thakur serves as Marketing Officer at Faisal Management Services, driving strategic outreach, client relations, and market development initiatives.</p>
+                                    <p>With a strong focus on building trusted international partnerships and connecting skilled Nepali professionals with leading global employers, she coordinates recruitment campaigns and client communication to ensure excellence, efficiency, and sustained organizational growth.</p>
                                 </div>
                             </div>
                         </div>
