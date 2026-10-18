@@ -5,7 +5,7 @@ import Card from '../components/ui/Card';
 import { COMPANY_INFO } from '../utils/constants';
 import headerBg from '../assets/about-header.png';
 import mdPhoto from '../assets/chairman.jpg';
-import jaySahPhoto from '../assets/MD.png';
+import jaySahPhoto from '../assets/jaynath_sah.jpg';
 import mrSherpaPhoto from '../assets/mr_sherpa.jpg';
 import partnerPhoto from '../assets/partner NB.png';
 import registrationImg from '../assets/registration.png';
@@ -27,14 +27,15 @@ const About = () => {
         "@context": "https://schema.org",
         "@type": "AboutPage",
         "name": "About Faisal Management Services LLC",
-        "description": "Company profile, government registration 165229/73/74, license 1289/074/75, Kuwait C.R. 2020/19741, Chairman Jay Sah and Managing Director Mr. Sherpa.",
+        "description": "Company profile, government registration 165229/73/74, license 1289/074/75, Kuwait C.R. 2020/19741, Chairman Jaynath Sah and Managing Director Mr. Sherpa.",
         "url": "https://faisalnepal.com.np/about",
         "mainEntity": {
             "@type": "EmploymentAgency",
             "name": "Faisal Management Services LLC",
             "founder": {
                 "@type": "Person",
-                "name": "Jay Sah",
+                "name": "Jaynath Sah",
+                "alternateName": "Jay Sah",
                 "jobTitle": "Chairman"
             },
             "employee": {
@@ -49,8 +50,8 @@ const About = () => {
         <>
             <SEO 
                 title="About Us - Leadership, Licenses & Embassy Registered Clients"
-                description="Learn about Faisal Management Services (formerly Sony International), led by Chairman Jay Sah and Managing Director Mr. Sherpa. Verified government licenses and 49+ Kuwait Embassy registered employers."
-                keywords="About Faisal Management, Jay Sah Chairman, Mr. Sherpa Managing Director, Kuwait Embassy Registration, Nepal Manpower License 1289/074/75, Sony International Nepal"
+                description="Learn about Faisal Management Services (formerly Sony International), led by Chairman Jaynath Sah and Managing Director Mr. Sherpa. Verified government licenses and 49+ Kuwait Embassy registered employers."
+                keywords="About Faisal Management, Jaynath Sah Chairman, Jay Sah, Mr. Sherpa Managing Director, Kuwait Embassy Registration, Nepal Manpower License 1289/074/75, Sony International Nepal"
                 canonicalPath="/about"
                 schema={aboutSchema}
             />
@@ -93,7 +94,7 @@ const About = () => {
                             <div className="relative mx-auto w-full max-w-[280px] sm:max-w-xs md:max-w-none h-auto rounded-xl overflow-hidden shadow-lg border border-gray-100">
                                 <img
                                     src={jaySahPhoto}
-                                    alt="Chairman"
+                                    alt="Chairman Jaynath Sah"
                                     className="w-full h-auto"
                                     onError={(e) => {
                                         e.target.src = 'https://images.unsplash.com/photo-1560250097-0b93528c311a?q=80&w=1974&auto=format&fit=crop';
@@ -103,7 +104,7 @@ const About = () => {
                         </div>
                         <div className="w-full md:w-3/5 text-center md:text-left">
                             <h2 className="text-2xl sm:text-3xl font-bold text-primary mb-2">Message from the Chairman</h2>
-                            <h3 className="text-lg sm:text-xl font-semibold text-gray-700 mb-4 sm:mb-6">Jay Sah</h3>
+                            <h3 className="text-lg sm:text-xl font-semibold text-gray-700 mb-4 sm:mb-6">Jaynath Sah</h3>
 
                             <div className="space-y-4 text-gray-600 mb-6 text-base sm:text-lg leading-relaxed">
                                 <p>First of all, we would like to extend our warm and heartfelt greetings to all members of the business community, both abroad and in Nepal.</p>
