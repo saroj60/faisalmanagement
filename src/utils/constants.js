@@ -2,6 +2,7 @@ export const NAV_LINKS = [
     { name: 'Home', path: '/' },
     { name: 'About Us', path: '/about' },
     { name: 'Kuwait Manpower 🇰🇼', path: '/kuwait-manpower-supply' },
+    { name: 'UAE Manpower 🇦🇪', path: '/uae-manpower-supply' },
     { name: 'Services', path: '/services' },
     { name: 'Demands', path: '/demands' },
     { name: 'Portfolio', path: '/portfolio' },

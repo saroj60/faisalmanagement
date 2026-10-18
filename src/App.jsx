@@ -6,6 +6,7 @@ import Home from './pages/Home';
 import About from './pages/About';
 import Services from './pages/Services';
 import KuwaitManpower from './pages/KuwaitManpower';
+import UaeManpower from './pages/UaeManpower';
 import Portfolio from './pages/Portfolio';
 import Demands from './pages/Demands';
 import DemandDetails from './pages/DemandDetails';
@@ -34,6 +35,8 @@ function App() {
               <Route path="/about" element={<About />} />
               <Route path="/services" element={<Services />} />
               <Route path="/kuwait-manpower-supply" element={<KuwaitManpower />} />
+              <Route path="/uae-manpower-supply" element={<UaeManpower />} />
+              <Route path="/uae" element={<UaeManpower />} />
               <Route path="/employers" element={<KuwaitManpower />} />
 
               {/* Public Demand Routes */}

@@ -47,10 +47,12 @@ const Footer = () => {
                         <h4 className="text-lg font-semibold mb-4 text-accent">Our Services</h4>
                         <ul className="space-y-2 text-sm text-white">
                             <li><Link to="/kuwait-manpower-supply" className="hover:text-accent font-semibold text-amber-300">Kuwait Manpower Supply 🇰🇼</Link></li>
+                            <li><Link to="/uae-manpower-supply" className="hover:text-accent font-semibold text-emerald-400">UAE Manpower Supply 🇦🇪</Link></li>
                             <li><Link to="/services" className="hover:text-white">Skilled & Professional Manpower</Link></li>
                             <li><Link to="/services" className="hover:text-white">Overseas Recruitment Nepal</Link></li>
                             <li><Link to="/services" className="hover:text-white">Trade Testing & Screening</Link></li>
-                            <li><Link to="/kuwait-manpower-supply#demand-form" className="hover:text-white">Hire From Nepal (Employer)</Link></li>
+                            <li><Link to="/uae-manpower-supply#demand-form" className="hover:text-white">Hire For UAE (Employer)</Link></li>
+                            <li><Link to="/kuwait-manpower-supply#demand-form" className="hover:text-white">Hire For Kuwait (Employer)</Link></li>
                         </ul>
                     </div>
 
