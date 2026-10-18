@@ -3,29 +3,24 @@ import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
 import { COMPANY_INFO } from '../../utils/constants';
 import Button from '../ui/Button';
-import heroImage from '../../assets/hero-relationship.png';
+import heroImage from '../../assets/hero-workforce.jpg';
 
 const Hero = () => {
     return (
-        <div className="relative bg-primary-light h-auto lg:h-[85vh] flex items-center overflow-hidden py-12 lg:py-0">
-            {/* Background Image - Removed as requested */}
-            <div className="absolute inset-0 z-0 bg-gradient-to-r from-white via-white/90 to-transparent lg:to-transparent">
-                {/* Gradient adjusted to ensure text readability on the left */}
-            </div>
-
-            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 w-full h-full flex items-center">
-                <div className="flex flex-col lg:flex-row items-center justify-between w-full h-full">
+        <div className="relative bg-gradient-to-b from-slate-50 via-white to-white h-auto lg:min-h-[85vh] flex items-center overflow-hidden py-10 lg:py-16 border-b border-gray-100">
+            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 w-full">
+                <div className="flex flex-col lg:flex-row items-center justify-between gap-8 lg:gap-12 w-full">
                     <motion.div
                         initial={{ opacity: 0, x: -30 }}
                         animate={{ opacity: 1, x: 0 }}
                         transition={{ duration: 0.8, delay: 0.2 }}
-                        className="max-w-2xl lg:w-1/2 mb-10 lg:mb-0 z-20"
+                        className="max-w-2xl lg:w-1/2 z-20"
                     >
                         <motion.span
                             initial={{ opacity: 0, y: 10 }}
                             animate={{ opacity: 1, y: 0 }}
                             transition={{ duration: 0.6, delay: 0.1 }}
-                            className="inline-block bg-primary/10 text-primary px-3 py-1 rounded-full text-xs sm:text-sm font-semibold mb-3 sm:mb-4"
+                            className="inline-block bg-primary/10 text-primary px-3.5 py-1.5 rounded-full text-xs sm:text-sm font-semibold mb-3 sm:mb-4"
                         >
                             Formerly {COMPANY_INFO.formerName}
                         </motion.span>
@@ -40,37 +35,32 @@ const Hero = () => {
                         </p>
                         <div className="flex flex-col sm:flex-row space-y-3 sm:space-y-0 sm:space-x-4 w-full sm:w-auto">
                             <Link to="/demands" className="w-full sm:w-auto">
-                                <Button size="lg" className="w-full sm:w-auto">View Demand</Button>
+                                <Button size="lg" className="w-full sm:w-auto shadow-md hover:shadow-lg">View Demand</Button>
                             </Link>
                             <Link to="/portfolio" className="w-full sm:w-auto">
-                                <Button size="lg" variant="outline" className="w-full sm:w-auto text-primary border-primary hover:bg-primary hover:text-white">
+                                <Button size="lg" variant="outline" className="w-full sm:w-auto text-primary border-primary hover:bg-primary hover:text-white shadow-xs">
                                     View Portfolio
                                 </Button>
                             </Link>
                         </div>
                     </motion.div>
 
-                    {/* Mobile/Tablet Image - Hidden on Large Screens */}
-                    <div className="lg:hidden w-full flex justify-center mt-8">
+                    {/* Workforce Team Image */}
+                    <motion.div
+                        initial={{ opacity: 0, scale: 0.95 }}
+                        animate={{ opacity: 1, scale: 1 }}
+                        transition={{ duration: 0.8, delay: 0.3 }}
+                        className="w-full lg:w-1/2 flex justify-center lg:justify-end items-center"
+                    >
                         <img
                             src={heroImage}
-                            alt="Professional Workforce"
-                            className="w-full max-w-md object-contain drop-shadow-xl"
+                            alt="Professional Overseas Workforce"
+                            className="w-full max-w-lg lg:max-w-2xl h-auto object-contain drop-shadow-xl"
                         />
-                    </div>
+                    </motion.div>
                 </div>
             </div>
-
-            {/* Desktop Full-Width Right Image */}
-            <div className="hidden lg:block absolute right-0 bottom-0 top-0 w-[50%] h-full z-0">
-                <img
-                    src={heroImage}
-                    alt="Professional Workforce"
-                    className="w-full h-full object-cover object-left-bottom" // Changed to object-left-bottom to keep the handshake focused
-                />
-            </div>
         </div>
-
     );
 };
 
